@@ -13,7 +13,7 @@ MAX_DESCRIPTION_LENGTH = 250
 
 class Todo(DBManager().Base):
     """Todo item model."""
-    
+
     __tablename__ = "todos"
 
     id: Mapped[int] = mapped_column(primary_key=True)
