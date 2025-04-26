@@ -5,6 +5,9 @@ from app.config.logger import setup_logger
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import router as api_router
+
+from app.models.todo import Todo
 
 logger = setup_logger(__name__)
 
@@ -22,22 +25,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-db_manager = DBManager()
 try:
-    # db_manager.connect() ## TODO: Uncomment this when the database is ready
+    DBManager().create_all()
     logger.info("Database connected successfully")
 except Exception as e:
     logger.error(f"Database connection failed: {e}")
     raise
 
+# Include API routes
+app.include_router(api_router)
 
 @app.get("/")
 async def root():
     """Root endpoint returning welcome message."""
     return {"message": "Welcome to PazFolio API"}
-
-
-@app.get("/health")
-async def health_check():
-    """Health check endpoint."""
-    return {"status": "healthy"}
