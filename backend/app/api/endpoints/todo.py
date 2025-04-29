@@ -29,12 +29,15 @@ async def get_todo(todo_id: int, db: Session = Depends(DBManager().get_db)):
 @router.post("/", response_model=TodoResponse)
 async def create_todo(todo: TodoCreate, db: Session = Depends(DBManager().get_db)):
     """Create a new todo."""
-    db_todo = Todo(title=todo.title, description=todo.description)
-    db.add(db_todo)
-    db.commit()
-    db.refresh(db_todo)
+    try:
+        db_todo = Todo(title=todo.title, description=todo.description)
+        db.add(db_todo)
+        db.commit()
+        db.refresh(db_todo)
 
-    return db_todo
+        return db_todo
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @router.put("/{todo_id}", response_model=TodoResponse)
 async def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(DBManager().get_db)):

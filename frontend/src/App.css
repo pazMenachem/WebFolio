@@ -1,0 +1,3 @@
+.app-container {
+    @apply bg-amber-200 min-h-screen flex items-center flex-col;
+  }

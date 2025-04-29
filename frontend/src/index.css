@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "./pages/toDoPage.css";
+@import "./App.css";
+@import "./components/ToDoCard.css";
+@import "./components/NavBar.css";

@@ -1,0 +1,11 @@
+.navbar {
+    @apply w-full bg-gray-800 text-white py-6 px-10 flex items-center justify-between shadow;
+  }
+  
+  .navbar-title {
+    @apply font-bold text-2xl;
+  }
+  
+  .navbar-links a {
+    @apply text-xl mx-2 hover:underline;
+  }
