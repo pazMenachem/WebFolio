@@ -1,14 +1,14 @@
-/**
- * Simple navigation bar for the app.
- */
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
     return (
       <nav className="navbar">
         <span className="navbar-title">Pazfolio</span>
         <div className="navbar-links">
-          <a href="#">Home</a>
-          <a href="#">ToDos</a>
-          <a href="#">Projects</a>
+          <Link to="/">Home</Link>
+          <Link to="/skills">Skills</Link>
+          <Link to="/professional">Professional</Link>
+          <Link to="/projects">Projects</Link>
         </div>
       </nav>
     );

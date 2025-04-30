@@ -1,18 +1,27 @@
 import ToDoPage from "./pages/ToDoPage";
 import NavBar from "./components/NavBar";
 import { useEffect } from "react";
-import Home from "./pages/home";
-
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import Professional from "./pages/Professional";
+import Projects from "./pages/Projects";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="app-container">
-      <NavBar />
-      <Home /> 
-    </div>
+    <Router>
+      <div className="app-container"> 
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/professional" element={<Professional />} />
+          <Route path="/projects" element={<Projects />} />
+      </Routes>
+      </div>
+    </Router>
   )
 }
-
 
 // scene.add(camera);
 
