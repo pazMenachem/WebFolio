@@ -1,0 +1,15 @@
+.slider-container {
+    @apply flex flex-row p-10 space-x-125 transform duration-1500;
+}
+
+.slider-image {
+    @apply rounded-lg;
+}
+
+.slider-visible {
+    @apply opacity-100;
+}
+
+.slider-hidden {
+    @apply opacity-0;
+}

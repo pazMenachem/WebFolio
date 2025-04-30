@@ -3,3 +3,12 @@
 @import "./App.css";
 @import "./components/ToDoCard.css";
 @import "./components/NavBar.css";
+@import "./components/Slider.css";
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} 

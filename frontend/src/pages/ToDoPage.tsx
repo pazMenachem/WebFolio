@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { toDoApi } from "../api/toDoApi";
 import type { ToDo } from "../types/toDo";
-import ToDoCard from "../components/toDoCard";
+import ToDoCard from "../components/ToDoCard";
 
 export default function ToDoPage() {
     const [toDos, setToDos] = useState<ToDo[]>([]);
