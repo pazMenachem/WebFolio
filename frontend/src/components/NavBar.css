@@ -1,5 +1,5 @@
 .navbar {
-    @apply w-full bg-gray-800 text-white py-6 px-10 flex items-center justify-between shadow;
+    @apply w-full bg-gray-800 text-white py-4 px-10 flex items-center justify-between shadow fixed top-0 z-10;
   }
   
   .navbar-title {

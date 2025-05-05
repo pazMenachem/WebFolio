@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@import "./pages/toDoPage.css";
 @import "./App.css";
-@import "./components/ToDoCard.css";
 @import "./components/NavBar.css";
 @import "./components/Slider.css";
+@import "./components/SkillsRow.css";
+@import "./components/SkillsGrid.css";
+@import "./pages/Skills.css";
+@import "./components/ProjectCard.css";
+@import "./components/ContactRecommend.css";
 
 #root {
   position: absolute;

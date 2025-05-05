@@ -1,31 +1,29 @@
 import Slider from "../components/Slider";
-import tirza from "../assets/Tirza.jpg";
+import homeData from "../consts/HomeConsts";
+import { JSX } from "react";
 
-export default function Home() {
+export default function Home(): JSX.Element {
 
   return (
     <>
-      <h1>Home</h1>
-      <Slider
-        imageSrc={tirza}
-        altText="Tirza1" 
-        flip={true}
-       />
-      <Slider
-       imageSrc={tirza}
-       altText="Tirza2"
-       flip={false} 
-       />
-      <Slider 
-        imageSrc={tirza} 
-        altText="Tirza3" 
-        flip={true} 
-      />
-      <Slider 
-        imageSrc={tirza} 
-        altText="Tirza4" 
-        flip={false} 
-      />
+      {homeData.map((item, index) => (
+        <Slider
+          key={index}
+          imageSrc={item.image}
+          altText={item.altText}
+          flip={index % 2 === 1}
+          description={item.description}
+          isContact={false}
+        />
+      ))}
+        <Slider
+          key={homeData.length}
+          imageSrc={homeData[homeData.length - 1].image}
+          altText={homeData[homeData.length - 1].altText}
+          flip={homeData.length % 2 === 1}
+          description={"This will be contact form"}
+          isContact={true}
+        />
     </>
   )
 }

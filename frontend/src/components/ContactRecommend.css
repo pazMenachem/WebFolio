@@ -1,0 +1,57 @@
+.contact-recommendation-container {
+    @apply flex flex-col text-center w-full;
+    font-style: oblique;
+}
+
+.recommendation-container {
+    @apply container overflow-auto h-3/4;
+    direction: rtl;
+}
+
+.contact-container {
+    @apply text-white h-1/4 pe-8;
+}
+
+.recommendation-container > * {
+    direction: ltr; /* Reset text direction for content */
+  }
+
+.recommendation-container::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .recommendation-container::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+  
+  .recommendation-container::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+  }
+  
+.recommendation-container::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+.recommendation-item {
+    @apply grid grid-rows-2 p-5 space-y-5;
+}
+
+.recommendation-item p:first-child {
+    @apply text-left text-white pl-5;
+}
+
+.recommendation-item p:last-child {
+    @apply text-right mr-80 text-white;
+}
+
+.Links {
+    @apply flex justify-center space-x-3 h-full items-center;
+}
+
+.Links a svg {
+    @apply w-8 h-8;
+}
+
+.contact-container h1 {
+    @apply text-white text-center text-3xl;
+}

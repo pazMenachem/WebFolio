@@ -1,6 +1,4 @@
-import ToDoPage from "./pages/ToDoPage";
 import NavBar from "./components/NavBar";
-import { useEffect } from "react";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Professional from "./pages/Professional";
@@ -17,7 +15,7 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/professional" element={<Professional />} />
           <Route path="/projects" element={<Projects />} />
-      </Routes>
+        </Routes>
       </div>
     </Router>
   )
