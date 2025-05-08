@@ -1,0 +1,13 @@
+.navbar {
+    @apply w-full text-white py-4 px-10 flex items-center justify-between shadow fixed top-0 z-10;
+    background-color: #1a0c0c;
+  }
+  
+  .navbar-title {
+    @apply font-bold text-2xl;
+  }
+  
+  .navbar-links a {
+    @apply text-xl mx-2 hover:underline;
+  }
+  
