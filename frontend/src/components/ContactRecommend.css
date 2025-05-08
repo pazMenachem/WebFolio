@@ -1,11 +1,20 @@
 .contact-recommendation-container {
-    @apply flex flex-col text-center w-full;
+    @apply flex flex-col text-center w-full pr-2;
     font-style: oblique;
 }
 
 .recommendation-container {
-    @apply container overflow-auto h-3/4;
+    @apply container h-3/4 overflow-auto transition-all duration-300;
+    box-shadow: 0 0 10px 2px #4f4242;
     direction: rtl;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox - hide by default */
+    scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.recommendation-container:hover,
+.recommendation-container:active {
+    overflow: auto; 
 }
 
 .contact-container {
@@ -13,22 +22,37 @@
 }
 
 .recommendation-container > * {
-    direction: ltr; /* Reset text direction for content */
+    direction: ltr;
   }
 
 .recommendation-container::-webkit-scrollbar {
-    @apply w-2;
-  }
+    @apply w-2 bg-transparent transition-all duration-300;
+}
+
+.recommendation-container::-webkit-scrollbar-track {
+    @apply bg-transparent transition-all duration-300;
+}
   
-  .recommendation-container::-webkit-scrollbar-track {
-    @apply bg-gray-800;
-  }
+.recommendation-container::-webkit-scrollbar-thumb {
+    @apply bg-transparent rounded-full transition-all duration-300;
+}
+
+/* Show scrollbar on hover with fade effect */
+.recommendation-container:hover {
+    @apply transition-all duration-300;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(75, 85, 99, 1) rgba(31, 41, 55, 1);
+}
+
+.recommendation-container:hover::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 transition-all duration-300;
+}
+
+.recommendation-container:hover::-webkit-scrollbar-track {
+    @apply bg-gray-800 transition-all duration-300;
+}
   
-  .recommendation-container::-webkit-scrollbar-thumb {
-    @apply bg-gray-600 rounded-full;
-  }
-  
-.recommendation-container::-webkit-scrollbar-thumb:hover {
+.recommendation-container:hover::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
 }
 
@@ -41,11 +65,11 @@
 }
 
 .recommendation-item p:last-child {
-    @apply text-right mr-80 text-white;
+    @apply text-right mr-10 text-white;
 }
 
 .Links {
-    @apply flex justify-center space-x-3 h-full items-center;
+    @apply flex justify-center space-x-4 h-1/2 items-center;
 }
 
 .Links a svg {
@@ -53,5 +77,5 @@
 }
 
 .contact-container h1 {
-    @apply text-white text-center text-3xl;
+    @apply text-white text-center text-3xl underline  decoration-red-500/75;
 }

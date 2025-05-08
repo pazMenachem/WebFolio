@@ -5,6 +5,7 @@ canvas {
 }
 
 .app-container {
-    @apply bg-gray-900 min-h-screen flex items-center flex-col mt-15;
+    @apply min-h-screen flex items-center flex-col mt-15 min-w-screen;
+    background-color: #1D1616;
   }
 

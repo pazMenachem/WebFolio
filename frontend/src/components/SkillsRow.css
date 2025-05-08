@@ -6,31 +6,35 @@
 .skill-cell {
     @apply w-20 h-18 m-2 relative transform transition-all duration-300 cursor-pointer flex items-center justify-center;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: #2a2a4a;
+    background-color: #38383f;
     animation: fadeIn 2s ease var(--delay) 1 normal forwards;
-    transform: rotate(30deg) !important;
+    transform: rotate(90deg) !important;
     opacity: 0;
   }
 
   .skill-icon {
     @apply w-10 h-10;
-    transform: rotate(-30deg);
+    transform: rotate(-90deg);
   }
   
   .skill-cell:hover {
-    @apply scale-110 shadow-lg z-10 border-5 border-red-700/25;
-    background-color: #3a3a6a;
+    @apply scale-110 shadow-lg;
+    background-color: rgb(96, 13, 13);
   }
 
   .skills-row {
-    @apply flex flex-row justify-center my-2 -mt-5;
+    @apply flex flex-row justify-center my-2 -mt-3;
   }
   
   .offset-row {
-    @apply flex ml-25;
+    @apply flex ml-23.25;
   }
 
   .hidden {
     opacity: 0 !important;
     cursor: default;
+  }
+
+  .skill-title {
+    @apply text-white text-sm;
   }

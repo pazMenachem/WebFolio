@@ -3,11 +3,11 @@
 }
 
 .skills-container {
-    @apply p-5 -mb-5 space-y-51;
+    @apply p-10 gap-10;
 }
 
 .skills-title {
-    @apply text-white text-4xl border-b-2 border-red-700;
+    @apply text-white text-4xl border-b-3 border-red-700 mb-auto;
 }
 
 

@@ -12,12 +12,13 @@
 }
 
 .project-card {
-  @apply bg-gray-800 rounded-4xl shadow-lg overflow-hidden opacity-0;
+  @apply rounded-4xl shadow-lg overflow-hidden opacity-0 border-4 border-red-400/25;
+  background-color: #292931;
   animation: fadeIn 1s var(--delay) forwards ease-in-out;
 }
 
 .project-image {
-  @apply w-full h-48 transform transition-transform border-b-2 border-red-700/50;
+  @apply w-full h-48 transform transition-transform border-b-4 border-red-700/50;
 }
 
 .project-card:hover .project-image {

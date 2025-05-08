@@ -3,11 +3,10 @@ import SchoolIcon from "@mui/icons-material/School";
 import StarIcon from "@mui/icons-material/Star";
 import { JSX } from "react";
 
-const SCHOOL_ICON_STYLE = { background: 'rgb(33, 150, 243)', color: '#aaa' };
-const WORK_ICON_STYLE = { background: 'rgb(33, 150, 243)', color: '#aaa' };
-const STAR_ICON_STYLE = { background: 'rgb(33, 150, 243)', color: '#aaa' };
-const CONTENT_STYLE = { background: 'rgb(33, 150, 243)', color: '#aaa' };
-const CONTENT_ARROW_STYLE = { borderRight: '5px solid  rgb(33, 150, 243)' };
+const ICON_STYLE = { background: 'rgb(230, 18, 18)', color: '#aaa', boxShadow: '0 0 10px 4px #4f4242' };
+const CONTENT_STYLE = { background: 'rgb(128, 11, 11)', color: '#aaa', boxShadow: '0 0 10px 4px #4f4242' };
+const CONTENT_ARROW_STYLE = { borderRight: '15px solid  rgb(128, 11, 11)' };
+const LINE_COLOR = '#4f4242';
 const CONTENT_STYLE_HIDDEN = { 'visibility': 'hidden' } as React.CSSProperties;
 const VERTICAL_TIMELINE_ELEMENT_STYLE = "vertical-timeline-element";
 
@@ -24,12 +23,11 @@ const VERTICAL_TIMELINE_ELEMENT_STYLE = "vertical-timeline-element";
  * Note - The last object is a star icon representing the begining of the timeline.
  */
 const professionalData : {
-    title: string | null, 
-    company: string | null, 
-    description: string | null, 
+    title: string | null,
+    company: string | null,
+    description: string | null,
     date: string | null, 
     icon: JSX.Element, 
-    iconStyle: React.CSSProperties
 }[] = [
     {
         title: "Example work Title",
@@ -37,7 +35,6 @@ const professionalData : {
         description: "Example work Description",
         date: "Example work Date",
         icon: <WorkIcon />,
-        iconStyle: WORK_ICON_STYLE,
     },
     {
         title: "Example School Title",
@@ -45,7 +42,6 @@ const professionalData : {
         description: "Example School Description",
         date: "Example School Date",
         icon: <SchoolIcon />,
-        iconStyle: SCHOOL_ICON_STYLE,
     },
     {
         title: "Example work Title",
@@ -53,7 +49,6 @@ const professionalData : {
         description: "Example work Description",
         date: "Example work Date",
         icon: <WorkIcon />,
-        iconStyle: WORK_ICON_STYLE,
     },
     {
         title: "Example School Title",
@@ -61,7 +56,6 @@ const professionalData : {
         description: "Example School Description",
         date: "Example School Date",
         icon: <SchoolIcon />,
-        iconStyle: SCHOOL_ICON_STYLE,
     },
     {
         title: "Example work Title",
@@ -69,7 +63,6 @@ const professionalData : {
         description: "Example work Description",
         date: "Example work Date",
         icon: <WorkIcon />,
-        iconStyle: WORK_ICON_STYLE,
     },
     {
         title: "Example School Title",
@@ -77,7 +70,6 @@ const professionalData : {
         description: "Example School Description",
         date: "Example School Date",
         icon: <SchoolIcon />,
-        iconStyle: SCHOOL_ICON_STYLE,
     },
     {
         title: "Example work Title",
@@ -85,7 +77,7 @@ const professionalData : {
         description: "Example work Description",
         date: "Example work Date",
         icon: <WorkIcon />,
-        iconStyle: WORK_ICON_STYLE,
+        
     },
     {
         title: "Example School Title",
@@ -93,7 +85,7 @@ const professionalData : {
         description: "Example School Description",
         date: "Example School Date",
         icon: <SchoolIcon />,
-        iconStyle: SCHOOL_ICON_STYLE,
+        
     },
     {
         title: "Example work Title",
@@ -101,7 +93,7 @@ const professionalData : {
         description: "Example work Description",
         date: "Example work Date",
         icon: <WorkIcon />,
-        iconStyle: WORK_ICON_STYLE,
+        
     },
     {
         title: "Example School Title",
@@ -109,7 +101,7 @@ const professionalData : {
         description: "Example School Description",
         date: "Example School Date",
         icon: <SchoolIcon />,
-        iconStyle: SCHOOL_ICON_STYLE,
+        
     },
     {
         title: null,
@@ -117,9 +109,16 @@ const professionalData : {
         description: null,
         date: null,
         icon: <StarIcon />,
-        iconStyle: STAR_ICON_STYLE
     },
 ];
 
-export { professionalData, VERTICAL_TIMELINE_ELEMENT_STYLE, CONTENT_STYLE, CONTENT_ARROW_STYLE, CONTENT_STYLE_HIDDEN };
+export { 
+    professionalData, 
+    VERTICAL_TIMELINE_ELEMENT_STYLE, 
+    CONTENT_STYLE, 
+    CONTENT_ARROW_STYLE, 
+    CONTENT_STYLE_HIDDEN, 
+    LINE_COLOR,
+    ICON_STYLE
+};
 

@@ -1,4 +1,4 @@
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava, FaPhp, FaDatabase, FaGit, FaLinux } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaPython } from "react-icons/fa";
 import { JSX } from "react";
 const MAX_DESCRIPTION_LENGTH = 200;
 

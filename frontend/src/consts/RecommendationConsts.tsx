@@ -41,7 +41,7 @@ const recommendations: {
             Really Really Really Really Long Recommendation
             Really Really Really Really Long Recommendation
             Really Really Really Really Long Recommendation"`,
-    },
+    }
 ]
 
 export default recommendations;
