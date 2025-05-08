@@ -1,6 +1,6 @@
-# 🧑‍💻 Pazfolio – Personal Portfolio Website
+# 🧑‍💻 Webfolio – Personal Portfolio Website
 
-Welcome to **Pazfolio**, a sleek and modern personal portfolio website built with React, Vite, and Tailwind CSS.  
+Welcome to **Webfolio**, a sleek and modern personal portfolio website built with React, Vite, and Tailwind CSS.  
 Perfect for showcasing your **skills**, **projects**, and **professional experience** in a clean and responsive design.
 
 ---
@@ -38,12 +38,12 @@ Built with modern web technologies:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/pazfolio.git
+   git clone https://github.com/yourusername/WebFolio.git
    ```
 
 2. **Navigate to the project directory**
    ```bash
-   cd pazfolio
+   cd WebFolio
    ```
 
 3. **Install dependencies**
