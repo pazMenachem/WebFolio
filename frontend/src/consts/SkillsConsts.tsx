@@ -44,13 +44,6 @@ const skillsData = new Map<string, {name: string, icon: string}[]>([
     { name: "Windows", icon: ReactIcon },
     { name: "MacOS", icon: ReactIcon },
   ]],
-  ["languages", [
-    { name: "English", icon: ReactIcon },
-    { name: "Spanish", icon: ReactIcon },
-    { name: "French", icon: ReactIcon },
-    { name: "German", icon: ReactIcon },
-    { name: "Italian", icon: ReactIcon },
-  ]]
 ]);
 
 export default skillsData;

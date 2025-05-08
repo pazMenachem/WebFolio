@@ -2,6 +2,7 @@
 
 Welcome to **Webfolio**, a sleek and modern personal portfolio website built with React, Vite, and Tailwind CSS.  
 Perfect for showcasing your **skills**, **projects**, and **professional experience** in a clean and responsive design.
+With effortless setup, all you need to edit is the content in the `consts` folder—unless you want to customize the style.
 
 ---
 
