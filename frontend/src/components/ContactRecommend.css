@@ -7,9 +7,9 @@
     @apply container h-3/4 overflow-auto transition-all duration-300;
     box-shadow: 0 0 10px 2px #4f4242;
     direction: rtl;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox - hide by default */
-    scrollbar-color: transparent transparent; /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent; 
 }
 
 .recommendation-container:hover,

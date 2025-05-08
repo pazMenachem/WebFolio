@@ -12,9 +12,10 @@
 }
 
 .project-card {
-  @apply rounded-4xl shadow-lg overflow-hidden opacity-0 border-4 border-red-400/25;
+  @apply rounded-4xl shadow-lg overflow-hidden opacity-0;
   background-color: #292931;
   animation: fadeIn 1s var(--delay) forwards ease-in-out;
+  box-shadow: 0 0 10px 2px #b41010;
 }
 
 .project-image {
