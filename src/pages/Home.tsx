@@ -6,7 +6,7 @@ import { contactMe } from "../consts/HomeConsts";
 export default function Home(): JSX.Element {
 
   return (
-    <>
+    <div className="home-container">
       {homeData.map((item, index) => (
         <Slider
           key={index}
@@ -25,6 +25,6 @@ export default function Home(): JSX.Element {
           description={"This will be contact section"}
           isContact={true}
         />
-    </>
+    </div>
   )
 }

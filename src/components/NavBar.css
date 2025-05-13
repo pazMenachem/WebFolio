@@ -1,5 +1,5 @@
 .navbar {
-    @apply w-full text-white py-4 px-10 flex items-center justify-between shadow fixed top-0 z-10;
+    @apply min-w-screen text-white py-4 px-10 flex items-center justify-between shadow fixed top-0 z-10;
     background-color: #1a0c0c;
   }
   
