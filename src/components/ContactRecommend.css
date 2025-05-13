@@ -1,10 +1,10 @@
 .contact-recommendation-container {
-    @apply flex flex-col text-center w-full pr-2;
+    @apply flex flex-col text-center w-1/2 pr-2;
     font-style: oblique;
 }
 
 .recommendation-container {
-    @apply container h-3/4 overflow-auto transition-all duration-300;
+    @apply h-3/4 overflow-auto transition-all duration-300;
     box-shadow: 0 0 10px 2px #4f4242;
     direction: rtl;
     -ms-overflow-style: none; 
@@ -18,7 +18,7 @@
 }
 
 .contact-container {
-    @apply text-white h-1/4 pe-8;
+    @apply text-white h-1/4;
 }
 
 .recommendation-container > * {
@@ -69,7 +69,7 @@
 }
 
 .Links {
-    @apply flex justify-center space-x-7 h-1/2 items-center;
+    @apply flex justify-center space-x-7 h-1/2 items-center flex-wrap;
 }
 
 .Links a svg {
