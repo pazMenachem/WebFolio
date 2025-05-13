@@ -4,7 +4,7 @@ import { JSX } from "react";
 export default function NavBar(): JSX.Element {
     return (
       <nav className="navbar">
-        <span className="navbar-title">Pazfolio</span>
+        <span className="navbar-title">WebFolio</span>
         <div className="navbar-links">
           <Link to="/">Home</Link>
           <Link to="/skills">Skills</Link>
