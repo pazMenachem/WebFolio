@@ -29,7 +29,6 @@ Built with modern web technologies:
 
 ## 📦 Requirements
 
-- [Node.js](https://nodejs.org/) (v16 or higher)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - A modern browser (for local testing)
 
