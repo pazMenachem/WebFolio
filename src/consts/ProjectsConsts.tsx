@@ -125,7 +125,7 @@ const projectsData : {
     {
         title: "WebFolio",
         description: "A sleek and modern personal portfolio website built with React, Vite, and Tailwind CSS. Perfect for showcasing your skills, projects, and professional experience in a clean and responsive design. ",
-        link: "https://github.com/pazMenachem/JobSeekPlayGround",
+        link: "https://github.com/pazMenachem/WebFolio",
         image: WebFolioImage,
         techStack: [
             {
@@ -193,7 +193,7 @@ const projectsData : {
     {
         title: "BuyTogether",
         description: "developed a web application that is supposed to help people group up, and organize a joint food purchase. Doing so, we remove the middlemen and reduce the price of the food products.",
-        link: "https://github.com/pazMenachem/BuyTogether",
+        link: "https://github.com/redhat-beyond/BuyTogether",
         image: BuyTogether,
         techStack: [
             {
