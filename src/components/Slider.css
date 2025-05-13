@@ -7,7 +7,7 @@
 }
 
 .slider-image {
-    @apply rounded-lg w-1/2;
+    @apply rounded-lg w-full max-w-[400px] ;
     box-shadow: 0 0 10px 0 rgba(207, 185, 185, 0.5);
 }
 
