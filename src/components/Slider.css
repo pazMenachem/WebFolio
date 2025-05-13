@@ -1,0 +1,25 @@
+.slider-container {
+    @apply w-4/10 flex flex-row p-10 transform duration-1500 h-150;
+}
+
+.slider-flip {
+    @apply flex-row-reverse;
+}
+
+.slider-image {
+    @apply rounded-lg w-full max-w-[400px] ;
+    box-shadow: 0 0 10px 0 rgba(207, 185, 185, 0.5);
+}
+
+.slider-visible {
+    @apply opacity-100;
+}
+
+.slider-hidden {
+    @apply opacity-0;
+}
+
+.slider-description {
+    @apply text-white p-2 w-full text-center mt-20;
+    font-style: italic;
+}

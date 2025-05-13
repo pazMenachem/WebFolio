@@ -1,0 +1,81 @@
+.contact-recommendation-container {
+    @apply flex flex-col text-center w-full pr-2;
+    font-style: oblique;
+}
+
+.recommendation-container {
+    @apply container h-3/4 overflow-auto transition-all duration-300;
+    box-shadow: 0 0 10px 2px #4f4242;
+    direction: rtl;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent; 
+}
+
+.recommendation-container:hover,
+.recommendation-container:active {
+    overflow: auto; 
+}
+
+.contact-container {
+    @apply text-white h-1/4 pe-8;
+}
+
+.recommendation-container > * {
+    direction: ltr;
+  }
+
+.recommendation-container::-webkit-scrollbar {
+    @apply w-2 bg-transparent transition-all duration-300;
+}
+
+.recommendation-container::-webkit-scrollbar-track {
+    @apply bg-transparent transition-all duration-300;
+}
+  
+.recommendation-container::-webkit-scrollbar-thumb {
+    @apply bg-transparent rounded-full transition-all duration-300;
+}
+
+/* Show scrollbar on hover with fade effect */
+.recommendation-container:hover {
+    @apply transition-all duration-300;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(75, 85, 99, 1) rgba(31, 41, 55, 1);
+}
+
+.recommendation-container:hover::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 transition-all duration-300;
+}
+
+.recommendation-container:hover::-webkit-scrollbar-track {
+    @apply bg-gray-800 transition-all duration-300;
+}
+  
+.recommendation-container:hover::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+.recommendation-item {
+    @apply grid grid-rows-2 p-5 space-y-5;
+}
+
+.recommendation-item p:first-child {
+    @apply text-left text-white pl-5;
+}
+
+.recommendation-item p:last-child {
+    @apply text-right mr-10 text-white;
+}
+
+.Links {
+    @apply flex justify-center space-x-7 h-1/2 items-center;
+}
+
+.Links a svg {
+    @apply w-8 h-8;
+}
+
+.contact-container h1 {
+    @apply text-white text-center text-3xl underline  decoration-red-500/75;
+}

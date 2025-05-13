@@ -1,0 +1,11 @@
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.app-container {
+    @apply min-h-screen flex items-center flex-col mt-15 min-w-screen;
+    background-color: #1D1616;
+  }
+
