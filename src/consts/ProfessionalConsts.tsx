@@ -30,6 +30,15 @@ const professionalData : {
     icon: JSX.Element, 
 }[] = [
     {
+        title: "Assigment Reviewer & Bootcamp Mentor",
+        company: "Start-Up Nation Central",
+        description: `Mentored student teams during the Excellanteam BootCamp.\n` +
+        "Supported backend project planning, architecture design, and team organization.\n" +
+        "Acted as a project lead and technical point of contact, helping teams improve code structure, collaboration, and development processes.",
+        date: "March 2025 - September 2025",
+        icon: <WorkIcon />,
+    },
+    {
         title: "Full-Stack Web Development Course",
         company: "Udemy",
         description: "The Complete Full-Stack Web Development Bootcamp by Dr. Angela Yu.\n" +
