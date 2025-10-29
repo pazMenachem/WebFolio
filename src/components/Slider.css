@@ -1,13 +1,10 @@
 .slider-container {
-    @apply w-4/10 pb-15 flex flex-row transform duration-1500;
-}
-
-.slider-flip {
-    @apply flex-row-reverse;
+    @apply w-full pb-3 flex flex-col transform duration-1500 gap-3;
+    background-color: #1D1616;
 }
 
 .slider-image {
-    @apply rounded-lg w-1/2 h-1/2;
+    @apply rounded-lg w-full h-auto;
     box-shadow: 0 0 10px 0 rgba(207, 185, 185, 0.5);
 }
 
@@ -20,6 +17,58 @@
 }
 
 .slider-description {
-    @apply text-white text-center mt-20 p-15 w-1/2 h-1/2;
+    @apply text-white text-center mt-3 p-3 w-full;
     font-style: italic;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (min-width: 768px) {
+    .slider-container {
+        @apply flex-row-reverse;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .slider-container {
+        @apply w-4/5 pb-8 flex-row;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .slider-container {
+        @apply w-1/2;
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-flip {
+        @apply flex-row-reverse;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .slider-image {
+        @apply w-1/2 h-auto;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .slider-description {
+        @apply p-10 w-1/2;
+        line-height: 1.7;
+    }
+}
+
+/* 1920px - Full HD screens */
+@media (min-width: 1920px) {
+    .slider-description {
+        @apply p-10 text-xl;
+    }
 }

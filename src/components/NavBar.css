@@ -1,13 +1,136 @@
 .navbar {
-    @apply min-w-screen text-white py-4 px-10 flex items-center justify-between shadow fixed top-0 z-10;
+    @apply min-w-screen text-white py-3 px-3 flex flex-col items-center justify-between shadow fixed top-0 z-10;
     background-color: #1a0c0c;
-  }
-  
-  .navbar-title {
-    @apply font-bold text-2xl;
-  }
-  
-  .navbar-links a {
-    @apply text-xl mx-2 hover:underline;
-  }
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .navbar {
+        @apply py-4 px-4;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .navbar {
+        @apply px-5;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .navbar {
+        @apply flex-row px-8 py-4;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .navbar {
+        @apply px-10;
+    }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+    .navbar {
+        @apply px-12;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .navbar {
+        @apply px-16;
+    }
+}
+
+.navbar-title {
+    @apply font-bold text-lg;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .navbar-title {
+        @apply text-xl;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .navbar-title {
+        @apply text-xl;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .navbar-title {
+        @apply text-2xl;
+    }
+}
+
+/* 1920px - Full HD screens */
+@media (min-width: 1920px) {
+    .navbar-title {
+        @apply text-3xl;
+    }
+}
+
+/* 2560px - 1440p screens */
+@media (min-width: 2560px) {
+    .navbar-title {
+        @apply text-4xl;
+    }
+}
+
+.navbar-links {
+    @apply flex flex-col items-center gap-2;
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .navbar-links {
+        @apply flex-row gap-0;
+    }
+}
+
+.navbar-links a {
+    @apply text-base mx-1 hover:underline;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .navbar-links a {
+        @apply text-lg mx-2;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .navbar-links a {
+        @apply text-lg mx-2;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .navbar-links a {
+        @apply text-xl mx-2;
+    }
+}
+
+/* 1920px - Full HD screens */
+@media (min-width: 1920px) {
+    .navbar-links a {
+        @apply text-2xl mx-3;
+    }
+}
+
+/* 2560px - 1440p screens */
+@media (min-width: 2560px) {
+    .navbar-links a {
+        @apply text-3xl mx-4;
+    }
+}
   

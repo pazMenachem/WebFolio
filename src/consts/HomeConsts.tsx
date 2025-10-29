@@ -13,12 +13,12 @@ export const homeData : {image: string, altText: string, description: string}[] 
     {
         image: about,
         altText: "About",
-        description: `B.Sc. in Computer Science, specializing in CPP, Python, and backend
-        development. Built multiple projects using algorithms, data structures, and object-
-        oriented programming (OOP). Developed system-level and web applications with a focus
-        on performance, and clean code. Strong knowledge of Linux, Git, Async Programming,
-        PostgreSQL, and gRPC. Looking for a Junior Software Developer position to work on
-        meaningful projects and grow as a developer.`
+        description: `Full stack / Backend Developer with a strong foundation in software engineering, a passion
+        for building scalable systems, and a proven ability to mentor and lead others.
+        I bring together hands-on project experience (client-server apps, multithreaded systems,
+        networking) with a background in teaching, volunteering (AKIM organization) and guiding
+        teams, making me both a strong individual contributor and a collaborative team player, my
+        way of doing things: “tell me the subject and I’ll learn it myself”.`
     },
 ]
 

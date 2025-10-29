@@ -3,9 +3,93 @@
 }
 
 .skills-container {
-    @apply p-10 gap-10;
+    @apply p-3 gap-5;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .skills-container {
+        @apply p-4 gap-6;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .skills-container {
+        @apply p-5 gap-7;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .skills-container {
+        @apply p-8 gap-8;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .skills-container {
+        @apply p-9 gap-9;
+    }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+    .skills-container {
+        @apply p-10 gap-10;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .skills-container {
+        @apply p-10 gap-10;
+    }
 }
 
 .skills-title {
-    @apply text-white text-4xl mb-auto underline underline-offset-4 decoration-red-700;
+    @apply text-white text-lg mb-auto underline underline-offset-4 decoration-red-700;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .skills-title {
+        @apply text-xl;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .skills-title {
+        @apply text-2xl;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .skills-title {
+        @apply text-3xl;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .skills-title {
+        @apply text-4xl;
+    }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+    .skills-title {
+        @apply text-4xl;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .skills-title {
+        @apply text-4xl;
+    }
 }
