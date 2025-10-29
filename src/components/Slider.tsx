@@ -11,11 +11,17 @@ export default function Slider({
  }: { imageSrc: string, altText: string, flip: boolean, description: string, isContact: boolean }): JSX.Element {
 
     const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: 0.2,
     });
 
     return (
-        <div className={`slider-container ${inView ? "slider-visible" : "slider-hidden"} ${flip ? "slider-flip" : ""}`} ref={ref}>
+        <div className={
+            `slider-container 
+            ${inView ? "slider-visible" : "slider-hidden"} 
+            ${flip ? "slider-flip" : ""} 
+            ${isContact ? "contact-slider-container" : ""}`
+            }
+            ref={ref}>
             <img className="slider-image" src={imageSrc} alt={altText}/>
             {
             isContact ? 

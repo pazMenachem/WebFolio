@@ -1,9 +1,7 @@
 .contact-recommendation-container {
     @apply flex flex-col text-center w-full pr-0;
     font-style: oblique;
-    background-color: #1D1616 !important;
-    border: none !important;
-    outline: none !important;
+    background-color: #1D1616
 }
 
 /* 375px - iPhone SE baseline */
@@ -24,9 +22,6 @@
 @media (min-width: 768px) {
     .contact-recommendation-container {
         @apply w-4/5 pr-1;
-        background-color: #1D1616;
-        border: none;
-        outline: none;
     }
 }
 
@@ -34,9 +29,6 @@
 @media (min-width: 1024px) {
     .contact-recommendation-container {
         @apply w-3/5 pr-1;
-        background-color: #1D1616;
-        border: none;
-        outline: none;
     }
 }
 
@@ -113,13 +105,6 @@
 
 /* 375px - iPhone SE baseline */
 @media (min-width: 375px) {
-    .recommendation-item {
-        @apply p-4 space-y-4;
-    }
-}
-
-/* 390px - iPhone 12/13 Pro */
-@media (min-width: 390px) {
     .recommendation-item {
         @apply p-4 space-y-4;
     }
@@ -238,13 +223,6 @@
 
 /* 375px - iPhone SE baseline */
 @media (min-width: 375px) {
-    .contact-container h1 {
-        @apply text-2xl;
-    }
-}
-
-/* 390px - iPhone 12/13 Pro */
-@media (min-width: 390px) {
     .contact-container h1 {
         @apply text-2xl;
     }
