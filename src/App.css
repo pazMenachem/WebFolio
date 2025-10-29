@@ -1,3 +1,45 @@
 .app-container {
-    @apply bg-[#1D1616] min-h-screen min-w-screen mt-15;
+    @apply bg-[#1D1616] min-h-screen min-w-screen mt-24;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .app-container {
+        @apply mt-28;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .app-container {
+        @apply mt-32;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .app-container {
+        @apply mt-20;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .app-container {
+        @apply mt-18;
+    }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+    .app-container {
+        @apply mt-15;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .app-container {
+        @apply mt-15;
+    }
 }

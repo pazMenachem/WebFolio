@@ -4,22 +4,176 @@
   }
 
 .projects-container {
-  @apply p-30 pr-100 pl-100;
+  @apply p-3;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .projects-container {
+    @apply p-4;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .projects-container {
+    @apply p-5;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .projects-container {
+    @apply p-8;
+  }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+  .projects-container {
+    @apply px-20 py-20;
+  }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+  .projects-container {
+    @apply px-100 py-30;
+  }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+  .projects-container {
+    @apply px-100 py-30;
+  }
 }
 
 .projects-grid {
-  @apply grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-y-10;
+  @apply grid grid-cols-1 gap-y-5;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .projects-grid {
+    @apply gap-y-6;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .projects-grid {
+    @apply gap-y-7;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .projects-grid {
+    @apply grid-cols-2 gap-y-8;
+  }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+  .projects-grid {
+    @apply grid-cols-3 gap-y-9;
+  }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+  .projects-grid {
+    @apply grid-cols-3 gap-y-10;
+  }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+  .projects-grid {
+    @apply grid-cols-4 gap-y-10;
+  }
 }
 
 .project-card {
-  @apply rounded-4xl shadow-lg overflow-hidden opacity-0 w-3/4;
+  @apply rounded-4xl shadow-lg overflow-hidden opacity-0 w-full;
   background-color: #292931;
   animation: fadeIn 1s var(--delay) forwards ease-in-out;
   box-shadow: 0 0 10px 2px #b41010;
 }
 
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .project-card {
+    @apply w-full;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .project-card {
+    @apply w-full;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .project-card {
+    @apply w-5/6;
+  }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+  .project-card {
+    @apply w-4/5;
+  }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+  .project-card {
+    @apply w-3/4;
+  }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+  .project-card {
+    @apply w-3/4;
+  }
+}
+
 .project-image {
-  @apply w-full h-48 transform transition-transform border-b-4 border-red-700/50;
+  @apply w-full h-32 transform transition-transform border-b-4 border-red-700/50;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .project-image {
+    @apply h-36;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .project-image {
+    @apply h-40;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .project-image {
+    @apply h-44;
+  }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+  .project-image {
+    @apply h-48;
+  }
 }
 
 .project-card:hover .project-image {
@@ -27,23 +181,128 @@
 }
 
 .project-details {
-  @apply p-4;
+  @apply p-3;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .project-details {
+    @apply p-4;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .project-details {
+    @apply p-4;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .project-details {
+    @apply p-4;
+  }
 }
 
 .project-title {
-  @apply text-base font-bold text-white hover:underline;
+  @apply text-sm font-bold text-white hover:underline;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .project-title {
+    @apply text-base;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .project-title {
+    @apply text-base;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .project-title {
+    @apply text-base;
+  }
 }
 
 .project-description {
-  @apply text-gray-300;
+  @apply text-gray-300 text-xs;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .project-description {
+    @apply text-sm;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .project-description {
+    @apply text-sm;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .project-description {
+    @apply text-sm;
+  }
 }
 
 .tech-used {
-  @apply flex flex-wrap mt-4 gap-1;
+  @apply flex flex-wrap mt-2 gap-1;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .tech-used {
+    @apply mt-3 gap-1;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .tech-used {
+    @apply mt-4 gap-1;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .tech-used {
+    @apply mt-4 gap-1;
+  }
 }
 
 .tech-badge {
-  @apply flex items-center bg-gray-700 text-white rounded-full px-3 py-1 mr-2 mb-1 space-x-1;
+  @apply flex items-center bg-gray-700 text-white rounded-full px-2 py-1 mr-1 mb-1 space-x-1 text-xs;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+  .tech-badge {
+    @apply px-3 py-1 mr-2 mb-1 text-sm;
+  }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+  .tech-badge {
+    @apply px-3 py-1 mr-2 mb-1 text-sm;
+  }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .tech-badge {
+    @apply px-3 py-1 mr-2 mb-1 text-sm;
+  }
 }
 
 .tech-badge:hover {

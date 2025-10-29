@@ -1,6 +1,57 @@
 .contact-recommendation-container {
-    @apply flex flex-col text-center w-1/2 pr-2;
+    @apply flex flex-col text-center w-full pr-0;
     font-style: oblique;
+    background-color: #1D1616 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .contact-recommendation-container {
+        @apply w-full pr-0;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .contact-recommendation-container {
+        @apply w-full pr-0;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .contact-recommendation-container {
+        @apply w-4/5 pr-1;
+        background-color: #1D1616;
+        border: none;
+        outline: none;
+    }
+}
+
+/* 1024px - iPad landscape */
+@media (min-width: 1024px) {
+    .contact-recommendation-container {
+        @apply w-3/5 pr-1;
+        background-color: #1D1616;
+        border: none;
+        outline: none;
+    }
+}
+
+/* 1280px - Standard laptop */
+@media (min-width: 1280px) {
+    .contact-recommendation-container {
+        @apply w-1/2 pr-2;
+    }
+}
+
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .contact-recommendation-container {
+        @apply w-1/2 pr-2;
+    }
 }
 
 .recommendation-container {
@@ -57,25 +108,165 @@
 }
 
 .recommendation-item {
-    @apply grid grid-rows-2 p-5 space-y-5;
+    @apply grid grid-rows-2 p-3 space-y-3;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .recommendation-item {
+        @apply p-4 space-y-4;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .recommendation-item {
+        @apply p-4 space-y-4;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .recommendation-item {
+        @apply p-5 space-y-5;
+    }
 }
 
 .recommendation-item p:first-child {
-    @apply text-left text-white pl-5;
+    @apply text-left text-white pl-2;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .recommendation-item p:first-child {
+        @apply pl-3;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .recommendation-item p:first-child {
+        @apply pl-4;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .recommendation-item p:first-child {
+        @apply pl-5;
+    }
 }
 
 .recommendation-item p:last-child {
-    @apply text-right mr-10 text-white;
+    @apply text-right mr-2 text-white;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .recommendation-item p:last-child {
+        @apply mr-4;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .recommendation-item p:last-child {
+        @apply mr-5;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .recommendation-item p:last-child {
+        @apply mr-10;
+    }
 }
 
 .Links {
-    @apply flex justify-center space-x-7 h-1/2 items-center flex-wrap;
+    @apply flex justify-center space-x-3 h-1/2 items-center flex-wrap;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .Links {
+        @apply space-x-4;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .Links {
+        @apply space-x-5;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .Links {
+        @apply space-x-7;
+    }
 }
 
 .Links a svg {
-    @apply w-8 h-8;
+    @apply w-6 h-6;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .Links a svg {
+        @apply w-7 h-7;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .Links a svg {
+        @apply w-7 h-7;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .Links a svg {
+        @apply w-8 h-8;
+    }
 }
 
 .contact-container h1 {
-    @apply text-white text-center text-3xl underline  decoration-red-500/75;
+    @apply text-white text-center text-xl underline decoration-red-500/75;
+}
+
+/* 375px - iPhone SE baseline */
+@media (min-width: 375px) {
+    .contact-container h1 {
+        @apply text-2xl;
+    }
+}
+
+/* 390px - iPhone 12/13 Pro */
+@media (min-width: 390px) {
+    .contact-container h1 {
+        @apply text-2xl;
+    }
+}
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+    .contact-container h1 {
+        @apply text-3xl;
+    }
+}
+
+/* 1920px - Full HD screens */
+@media (min-width: 1920px) {
+    .contact-container h1 {
+        @apply text-4xl;
+    }
+}
+
+/* 2560px - 1440p screens */
+@media (min-width: 2560px) {
+    .contact-container h1 {
+        @apply text-5xl;
+    }
 }
