@@ -4,13 +4,14 @@ import JobSeekPlayGroundImage from "../assets/JobSeekPlayGround.webp";
 import WebFolioImage from "../assets/WebFolio.webp";
 import CodeToGether from "../assets/CodeToGether.webp";
 import BuyTogether from "../assets/BuyTogether.webp";
+import JobHunter from "../assets/JobHunterPicture.png";
 
 
 import {
     FaLinux , FaPython,
     FaReact, FaCss3Alt, FaHtml5,
     FaNodeJs,
-    FaFlask, FaRedhat 
+    FaFlask, FaRedhat, FaDocker
     } from "react-icons/fa";
 import {
     SiPytest, SiGnubash, SiSqlite,
@@ -46,6 +47,26 @@ const projectsData : {
     image: string, 
     techStack: {name: string, icon: JSX.Element}[]
 }[] = [
+    {
+        title: "JobHunter",
+        description: "Automated job search and filtering application that crawls job listings, analyzes them using AI, and sends relevant opportunities directly to you.",
+        link: "https://github.com/pazMenachem/JobHunter",
+        image: JobHunter,
+        techStack: [
+            {
+                name: "Python",
+                icon: <FaPython />
+            },
+            {
+                name: "Linux",
+                icon: <FaLinux />
+            },
+            {
+                name: "Docker",
+                icon: <FaDocker />
+            },
+        ]
+    },
     {
         title: "My_Internet",
         description: "A powerful network filtering solution that combines kernel-level packet inspection with user-friendly controls for managing internet access and content filtering.",
