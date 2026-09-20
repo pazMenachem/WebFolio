@@ -26,13 +26,9 @@
     @apply flex flex-row justify-center my-2 -mt-3;
   }
   
+  /* Half a cell, so alternate rows nest into the row above. */
   .offset-row {
-    @apply flex ml-23.25;
-  }
-
-  .skill-cell-hidden {
-    opacity: 0 !important;
-    cursor: default;
+    transform: translateX(48px);
   }
 
   .skill-title {
@@ -59,8 +55,9 @@
     @apply w-4 h-4;
   }
 
+  /* Half the 52px mobile cell pitch (w-12 + m-0.5 x2). */
   .offset-row {
-    margin-left: 26px;
+    transform: translateX(26px);
   }
 
   .skills-row {
