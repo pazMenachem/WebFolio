@@ -33,9 +33,9 @@ const professionalData : {
         title: "IT & Security Engineer",
         company: "Copyleaks",
         description: `Sole IT and security engineer for an 80-person SaaS company, reporting to the CISO.\n` +
-        "Built and shipped two internal platforms that are now in daily production use — the HR performance-review platform used by all 80 employees, and Manage-IT, used daily by the IT and security team. Both were in scope for the company's SOC 2 audit.\n" +
-        "Harden cloud networks across GCP and Oracle Cloud: firewall rules, network policy, least-privilege access design and recurring access reviews.\n" +
-        "Led the technical evidence work for the SOC 2 Type II audit, and automate operational workflows in Python, Bash and n8n across cloud, identity and endpoint systems.",
+        "Built the performance-review platform the whole company runs its review cycle through, and Manage-IT, the tool the IT and security team runs the day on. Both in daily use, both in scope for the company SOC 2 audit.\n" +
+        "Harden the cloud networks across GCP and Oracle Cloud: firewall rules, network policy, least-privilege access design and recurring access reviews.\n" +
+        "Led the technical evidence work for the SOC 2 Type II audit, and automate the operational workflows in Python, Bash and n8n across cloud, identity and endpoint systems.",
         date: "January 2026 - Present",
         icon: <WorkIcon />,
     },
@@ -96,9 +96,8 @@ const professionalData : {
     {
         title: "Programming Teacher",
         company: "Israel Cyber Campus - Magshimim",
-        description: `Taught C++ programming to 11th-grade students and computer networks to 10th-grade students.\n` +
-        `Focused on coding best practices, Git version control, and hands-on projects.\n` + 
-        `Mentored 40+ students toward elite IDF cyber units, two thirds of them accepted.`,
+        description: `Taught C++ to 11th-graders and computer networks to 10th-graders, through hands-on projects with Git version control.\n` +
+        `Prepared 40+ students for elite IDF cyber units. Two thirds got in.`,
         date: "2022 - 2024",
         icon: <WorkIcon />,
     },

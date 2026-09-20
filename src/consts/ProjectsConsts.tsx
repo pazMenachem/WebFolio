@@ -28,7 +28,7 @@ import {
     } from "react-icons/tb";
 import { JSX } from "react";
 
-const MAX_DESCRIPTION_LENGTH = 340;
+const MAX_DESCRIPTION_LENGTH = 450;
 
 /**
  * Array of project data objects.
@@ -54,7 +54,7 @@ const projectsData: {
 }[] = [
     {
         title: "HR Performance-Review Platform",
-        description: "Built end to end at Copyleaks and rolled out to all 80 employees, and in scope for the company SOC 2 audit. Keycloak OIDC authentication, role-based access control so reviewers only ever see their own cycle, and private file storage for review documents.",
+        description: "An HR performance-review platform that all 80 people at Copyleaks run their review cycle through, and one of the two systems I built that were in scope for the company SOC 2 audit. Built end to end: Keycloak OIDC for sign-in, role-based access control so a reviewer only ever sees their own cycle, and private file storage for review documents. Internal, so there is no public repository.",
         techStack: [
             { name: "Next.js", icon: <SiNextdotjs /> },
             { name: "Fastify", icon: <SiFastify /> },
@@ -66,7 +66,7 @@ const projectsData: {
     },
     {
         title: "Manage-IT",
-        description: "Built at Copyleaks and used daily by the IT and security team, and in scope for the company SOC 2 audit. Integrates two MDM APIs and the company IdP to keep device inventory and the employee directory in sync, and runs onboarding and offboarding as tracked, repeatable checklists.",
+        description: "The tool the Copyleaks IT and security team runs the day on, and the second of the two systems in scope for the company SOC 2 audit. It pulls device inventory from two MDM platforms and the employee directory from the company IdP so the two stay in sync, and turns onboarding and offboarding into tracked checklists instead of remembered steps. Internal, so there is no public repository.",
         techStack: [
             { name: "Next.js", icon: <SiNextdotjs /> },
             { name: "TypeScript", icon: <SiTypescript /> },
@@ -76,7 +76,7 @@ const projectsData: {
     },
     {
         title: "My_Internet",
-        description: "A Linux kernel module written in C that filters domains and ad traffic at the packet level, rather than at the browser or DNS layer. Paired with a Python management interface and a SQLite store for the rule set, so the filtering policy can change without reloading the module.",
+        description: "A home internet filter that blocks domains and ad traffic from inside the Linux kernel. The filtering happens at the packet level, before the browser or the DNS resolver sees the request. A Python management interface and a SQLite rule store change the policy without reloading the module.",
         link: "https://github.com/pazMenachem/My_Internet",
         image: myInternetImage,
         techStack: [
@@ -90,7 +90,7 @@ const projectsData: {
     },
     {
         title: "JobHunter",
-        description: "An automated job-search pipeline in Python: it crawls listings, filters them with an LLM, and pushes the matches to Telegram or email. Provider-based architecture with factories for the LLM and notification layers, so a new model or channel is a new provider rather than a rewrite. Dockerised, on scheduled runs.",
+        description: "A scheduler that reads job listings with an LLM and messages the matches to Telegram. It crawls the listings, filters them, and runs unattended in Docker on a schedule. Factories behind the LLM and the notification layer mean a different model or a different channel is a new provider rather than a rewrite.",
         link: "https://github.com/pazMenachem/JobHunter",
         image: JobHunter,
         techStack: [
@@ -101,7 +101,7 @@ const projectsData: {
     },
     {
         title: "Self-hosted AI agent",
-        description: "A personal assistant built on the Claude Agent SDK and deployed on a Raspberry Pi. Covered API integration, tool design, running it as a managed service, and securing a self-hosted device that is exposed to the network.",
+        description: "A personal assistant that runs on a Raspberry Pi on my own network, built on the Claude Agent SDK. API integration and tool design on one side; on the other, running it as a managed service and securing a self-hosted device that is reachable from the network.",
         techStack: [
             { name: "Claude Agent SDK", icon: <SiAnthropic /> },
             { name: "Python", icon: <FaPython /> },
@@ -111,7 +111,7 @@ const projectsData: {
     },
     {
         title: "Trivia Game",
-        description: "A multithreaded C++ socket server with a request-handler factory, a custom JSON protocol over TCP and SQLite persistence, paired with a C# WinForms client. Room management and user authentication are handled server-side, one thread per connected client.",
+        description: "A multiplayer trivia game with its own C++ server and wire protocol, and a C# desktop client. The server is multithreaded, one thread per connected client, with a request-handler factory, a custom JSON protocol over TCP, and SQLite behind it for accounts and questions.",
         link: "https://github.com/pazMenachem/Trivia_Game",
         image: TriviaGameImage,
         techStack: [
@@ -122,7 +122,7 @@ const projectsData: {
     },
     {
         title: "WebFolio",
-        description: "This site. A personal portfolio built with React, TypeScript, Vite and Tailwind CSS, deployed to GitHub Pages.",
+        description: "This site. React, TypeScript and Vite, built and deployed to GitHub Pages from the same repository.",
         link: "https://github.com/pazMenachem/WebFolio",
         image: WebFolioImage,
         techStack: [
@@ -136,7 +136,7 @@ const projectsData: {
     },
     {
         title: "CodeToGether",
-        description: "A platform for bridging the practical gap for students learning open-source development, with instructions, resources and a guided path for newcomers making their first contributions.",
+        description: "A site that walks students through their first open-source contribution: the setup steps, the resources, and a starting path for newcomers who have never opened a pull request.",
         link: "https://github.com/pazMenachem/CodeToGether",
         image: CodeToGether,
         techStack: [
@@ -149,7 +149,7 @@ const projectsData: {
     },
     {
         title: "BuyTogether",
-        description: "Built in a team of five under Red Hat mentorship during the Red Hat Beyond course. A web application that helps people group up and organise a joint food purchase, removing the middlemen and reducing the price of the products.",
+        description: "Built in a team of five under Red Hat mentorship during the Red Hat Beyond course. A web application for organising a joint food purchase, so a group buys together, cuts out the middleman and pays less per person.",
         link: "https://github.com/redhat-beyond/BuyTogether",
         image: BuyTogether,
         techStack: [
@@ -162,7 +162,7 @@ const projectsData: {
     },
     {
         title: "JobSeekPlayGround",
-        description: "A practice repository for core software-development concepts across frontend and backend, used to try out technologies outside the constraints of a production project.",
+        description: "A scratch repository where I try things out: small programs across C++, Python and JavaScript, deliberately kept apart from anything that has to keep working.",
         link: "https://github.com/pazMenachem/JobSeekPlayGround",
         image: JobSeekPlayGroundImage,
         techStack: [
