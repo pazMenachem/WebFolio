@@ -10,7 +10,7 @@ import {
     FaLinux, FaPython,
     FaReact, FaCss3Alt, FaHtml5,
     FaNodeJs,
-    FaFlask, FaRedhat, FaDocker
+    FaFlask, FaRedhat, FaDocker, FaWindows
     } from "react-icons/fa";
 import {
     SiPytest, SiGnubash, SiSqlite,
@@ -19,6 +19,7 @@ import {
     SiRedux, SiMongodb,
     SiDjango, SiVagrant,
     SiNextdotjs, SiFastify, SiFirebase,
+    SiFastapi, SiDotnet, SiNodedotjs, SiPostgresql,
     SiGooglecloud, SiKeycloak, SiAnthropic,
     SiRaspberrypi
     } from "react-icons/si";
@@ -28,7 +29,7 @@ import {
     } from "react-icons/tb";
 import { JSX } from "react";
 
-const MAX_DESCRIPTION_LENGTH = 450;
+const MAX_DESCRIPTION_LENGTH = 500;
 
 /**
  * Array of project data objects.
@@ -86,6 +87,19 @@ const projectsData: {
             { name: "Sqlite", icon: <SiSqlite /> },
             { name: "Pytest", icon: <SiPytest /> },
             { name: "BashScript", icon: <SiGnubash /> },
+        ]
+    },
+    {
+        title: "NetShield",
+        description: "Domain filtering for Windows that rewrites DNS traffic in user space — no proxy, no root certificate, no kernel driver. A privileged process redirects queries to a filtering resolver and rewrites the replies so the machine's own stub resolver still accepts them. Still in progress, and specific about it: the client and server tiers are not wired together, there is no auth, and DNS-over-HTTPS bypasses it — parental-control grade, not a security boundary.",
+        link: "https://github.com/pazMenachem/NetShield",
+        techStack: [
+            { name: "Python", icon: <FaPython /> },
+            { name: "Windows", icon: <FaWindows /> },
+            { name: "FastAPI", icon: <SiFastapi /> },
+            { name: ".NET", icon: <SiDotnet /> },
+            { name: "Node.js", icon: <SiNodedotjs /> },
+            { name: "PostgreSQL", icon: <SiPostgresql /> },
         ]
     },
     {
