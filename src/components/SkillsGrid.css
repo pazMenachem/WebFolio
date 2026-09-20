@@ -2,48 +2,48 @@
     @apply flex flex-col items-center;
 }
 
-.skills-container {
+.skills-section {
     @apply p-3 gap-5;
 }
 
 /* 375px - iPhone SE baseline */
 @media (min-width: 375px) {
-    .skills-container {
+    .skills-section {
         @apply p-4 gap-6;
     }
 }
 
 /* 390px - iPhone 12/13 Pro */
 @media (min-width: 390px) {
-    .skills-container {
+    .skills-section {
         @apply p-5 gap-7;
     }
 }
 
 /* 768px - iPad portrait */
 @media (min-width: 768px) {
-    .skills-container {
+    .skills-section {
         @apply p-8 gap-8;
     }
 }
 
 /* 1024px - iPad landscape */
 @media (min-width: 1024px) {
-    .skills-container {
+    .skills-section {
         @apply p-9 gap-9;
     }
 }
 
 /* 1280px - Standard laptop */
 @media (min-width: 1280px) {
-    .skills-container {
+    .skills-section {
         @apply p-10 gap-10;
     }
 }
 
 /* 1440px - High-res laptop */
 @media (min-width: 1440px) {
-    .skills-container {
+    .skills-section {
         @apply p-10 gap-10;
     }
 }

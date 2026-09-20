@@ -1,8 +1,10 @@
-# 🧑‍💻 Webfolio – Personal Portfolio Website
+# Webfolio — Paz Menachem's portfolio site
 
-Welcome to **Webfolio**, a sleek and modern personal portfolio website built with React, Vite, and Tailwind CSS.  
-Perfect for showcasing your **skills**, **projects**, and **professional experience** in a clean and responsive design.
-With effortless setup, all you need to edit is the content in the `consts` folder—unless you want to customize the style.
+Source for [pazmenachem.github.io/WebFolio](https://pazmenachem.github.io/WebFolio/): a React, Vite and TypeScript
+single-page site presenting work history, projects and skills.
+
+All the content lives in `src/consts/` and the components read from it, so changing the site means editing data
+rather than markup.
 
 ---
 
@@ -38,7 +40,7 @@ Built with modern web technologies:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/WebFolio.git
+   git clone https://github.com/pazMenachem/WebFolio.git
    ```
 
 2. **Navigate to the project directory**
@@ -74,12 +76,12 @@ Built with modern web technologies:
 
 ## 🌐 Deployment
 
-Deploy using:
+GitHub Pages serves `main:/docs`, and `npm run build` writes straight into `docs/`
+(`outDir` in `vite.config.ts`). So deploying is committing a fresh build on `main` — there is no
+separate publish step, and `docs/` is checked in deliberately.
 
-- **GitHub Pages**
-- **Netlify**
-- **Vercel**
-- Any static hosting service
+`public/404.html` is the single-page-app fallback: GitHub Pages has no route for `/WebFolio/projects`,
+so that file rewrites the path into a query string and `index.html` turns it back into a route.
 
 ---
 

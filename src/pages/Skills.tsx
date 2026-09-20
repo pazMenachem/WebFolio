@@ -4,10 +4,10 @@ import { JSX } from "react";
 
 export default function Skills(): JSX.Element {
     return (
-        <>
+        <div className="skills-page">
             {Array.from(skillsData.keys()).map((key) => (
-            <SkillsGrid key={key} title={key} data={skillsData.get(key) ?? []} />
+                <SkillsGrid key={key} title={key} data={skillsData.get(key) ?? []} />
             ))}
-        </>
+        </div>
     );
 }
