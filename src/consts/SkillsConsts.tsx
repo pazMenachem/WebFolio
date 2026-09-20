@@ -1,70 +1,87 @@
-import PythonIcon from "../assets/skills/Python.png";
-import CIcon from "../assets/skills/C.png";
-import CppIcon from "../assets/skills/C++.png";
-import CSharpIcon from "../assets/skills/CSharp.png";
-import TypeScriptIcon from "../assets/skills/TypeScript.png";
-import PostgresSQLIcon from "../assets/skills/PostgresSQL.png";
-import MongoDBIcon from "../assets/skills/MongoDB.png";
-import DjangoIcon from "../assets/skills/Django.png";
-import NodeJsIcon from "../assets/skills/Node.js.png";
-import FastAPIIcon from "../assets/skills/FastAPI.png";
-import FlaskIcon from "../assets/skills/Flask.png";
-import ReactIcon from "../assets/skills/React.png";
-import TailwindIcon from "../assets/skills/Tailwind CSS.png";
-import CSSIcon from "../assets/skills/CSS3.png";
-import HTMLIcon from "../assets/skills/HTML5.png";
-import GitIcon from "../assets/skills/Git.png";
-import DockerIcon from "../assets/skills/Docker.png";
-import BashIcon from "../assets/skills/Bash.png";
-import PostmanIcon from "../assets/skills/Postman.png";
-import SeleniumIcon from "../assets/skills/Selenium.png";
-import PytestIcon from "../assets/skills/pytest.png";
-import LinuxIcon from "../assets/skills/Linux.png";
+import {
+  FaPython, FaLinux, FaDocker, FaReact, FaCss3Alt, FaHtml5, FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiTypescript, SiGnubash, SiNextdotjs, SiFastify, SiNodedotjs, SiDjango,
+  SiFirebase, SiPostgresql, SiSqlite, SiGooglecloud, SiOracle, SiTerraform,
+  SiGithubactions, SiKeycloak, SiElastic, SiCloudflare, SiOpenvpn,
+  SiAnthropic, SiN8N, SiPytest, SiPostman, SiTailwindcss,
+} from "react-icons/si";
+import {
+  TbCircleLetterCFilled, TbBrandCpp, TbBrandCSharp, TbBrandPowershell,
+  TbApi, TbShieldCheck, TbPlugConnected,
+} from "react-icons/tb";
+import { JSX } from "react";
 
 /**
  * Map of skill categories to arrays of skill objects.
  * Each skill object contains:
  * @property {string} name - The name of the skill.
- * @property {string} icon - The path to the skill's icon.
- * 
- * https://techicons.dev/ for icons
+ * @property {JSX.Element} icon - The skill's icon, from react-icons.
+ *
+ * Only tooling Paz works with directly is listed here. Concepts that have no
+ * meaningful icon (OIDC, SAML, SOC 2 Type II, least-privilege access design)
+ * live in the CV and the timeline rather than in this grid. Kubernetes is
+ * deliberately absent: it is theoretical on the CV and listing it here
+ * without that caveat would overstate it.
+ *
+ * https://react-icons.github.io/react-icons/
  */
 
-type Skill = { name: string; icon: string };
+type Skill = { name: string; icon: JSX.Element };
 
 const skillsData = new Map<string, Skill[]>([
-  ["Backend", [
-    { name: "Python", icon: PythonIcon },
-    { name: "C", icon: CIcon },
-    { name: "C++", icon: CppIcon },
-    { name: "C#", icon: CSharpIcon},
-    { name: "TypeScript", icon: TypeScriptIcon },
-    { name: "PostgreSQL", icon: PostgresSQLIcon },
-    { name: "MongoDB", icon: MongoDBIcon },
-    { name: "Django", icon: DjangoIcon },
-    { name: "NodeJs", icon: NodeJsIcon },
-    { name: "FastAPI", icon: FastAPIIcon },
-    { name: "Flask", icon: FlaskIcon },
+  ["Languages", [
+    { name: "Python", icon: <FaPython /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
+    { name: "C", icon: <TbCircleLetterCFilled /> },
+    { name: "C++", icon: <TbBrandCpp /> },
+    { name: "C#", icon: <TbBrandCSharp /> },
+    { name: "Bash", icon: <SiGnubash /> },
+    { name: "PowerShell", icon: <TbBrandPowershell /> },
+  ]],
+  ["Backend & Data", [
+    { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Fastify", icon: <SiFastify /> },
+    { name: "Node.js", icon: <SiNodedotjs /> },
+    { name: "Django", icon: <SiDjango /> },
+    { name: "REST APIs", icon: <TbApi /> },
+    { name: "Firestore", icon: <SiFirebase /> },
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
+    { name: "SQLite", icon: <SiSqlite /> },
+  ]],
+  ["Cloud & Infrastructure", [
+    { name: "Google Cloud", icon: <SiGooglecloud /> },
+    { name: "Oracle Cloud", icon: <SiOracle /> },
+    { name: "Docker", icon: <FaDocker /> },
+    { name: "Terraform", icon: <SiTerraform /> },
+    { name: "Linux", icon: <FaLinux /> },
+    { name: "Git", icon: <FaGitAlt /> },
+    { name: "GitHub Actions", icon: <SiGithubactions /> },
+  ]],
+  ["Security & Identity", [
+    { name: "Keycloak", icon: <SiKeycloak /> },
+    { name: "Elastic SIEM", icon: <SiElastic /> },
+    { name: "CrowdStrike EDR", icon: <TbShieldCheck /> },
+    { name: "Cloudflare", icon: <SiCloudflare /> },
+    { name: "OpenVPN", icon: <SiOpenvpn /> },
+  ]],
+  ["AI Tooling", [
+    { name: "Claude Agent SDK", icon: <SiAnthropic /> },
+    { name: "MCP", icon: <TbPlugConnected /> },
+    { name: "n8n", icon: <SiN8N /> },
   ]],
   ["Frontend", [
-    { name: "React", icon: ReactIcon },
-    { name: "Tailwind", icon: TailwindIcon },
-    { name: "CSS", icon: CSSIcon },
-    { name: "HTML", icon: HTMLIcon },
-  ]],
-  ["Tools", [
-    { name: "Git", icon: GitIcon },
-    { name: "Docker", icon: DockerIcon },
-    { name: "Bash", icon: BashIcon },
+    { name: "React", icon: <FaReact /> },
+    { name: "Tailwind", icon: <SiTailwindcss /> },
+    { name: "HTML", icon: <FaHtml5 /> },
+    { name: "CSS", icon: <FaCss3Alt /> },
   ]],
   ["Testing", [
-    { name: "Pytest", icon: PytestIcon },
-    { name: "Selenium", icon: SeleniumIcon },
-    { name: "Postman", icon: PostmanIcon },
-  ]],
-  ["Other", [
-    { name: "Linux", icon: LinuxIcon },
+    { name: "Pytest", icon: <SiPytest /> },
+    { name: "Postman", icon: <SiPostman /> },
   ]],
 ]);
 
 export default skillsData;
+export type { Skill };

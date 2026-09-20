@@ -30,12 +30,22 @@ const professionalData : {
     icon: JSX.Element, 
 }[] = [
     {
-        title: "Assigment Reviewer & Bootcamp Mentor",
-        company: "Start-Up Nation Central",
-        description: `Mentored student teams during the Excellanteam BootCamp.\n` +
-        "Supported backend project planning, architecture design, and team organization.\n" +
-        "Acted as a project lead and technical point of contact, helping teams improve code structure, collaboration, and development processes.",
-        date: "March 2025 - September 2025",
+        title: "IT & Security Engineer",
+        company: "Copyleaks",
+        description: `Sole IT and security engineer for an 80-person SaaS company, reporting to the CISO.\n` +
+        "Built and shipped two internal platforms that are now in daily production use — the HR performance-review platform used by all 80 employees, and Manage-IT, used daily by the IT and security team. Both were in scope for the company's SOC 2 audit.\n" +
+        "Harden cloud networks across GCP and Oracle Cloud: firewall rules, network policy, least-privilege access design and recurring access reviews.\n" +
+        "Led the technical evidence work for the SOC 2 Type II audit, and automate operational workflows in Python, Bash and n8n across cloud, identity and endpoint systems.",
+        date: "January 2026 - Present",
+        icon: <WorkIcon />,
+    },
+    {
+        title: "Teaching Assistant & Mentor",
+        company: "Excellenteam / Start-Up Nation Central",
+        description: `Invited back after completing the bootcamp.\n` +
+        "Graded student exercises for a full semester, then mentored teams on projects sponsored by NVIDIA, Google and Check Point.\n" +
+        "Supported backend architecture, project planning and development process.",
+        date: "March 2025 - August 2025",
         icon: <WorkIcon />,
     },
     {
@@ -56,7 +66,7 @@ const professionalData : {
     {
         title: "BS.c in Computer Science",
         company: "Tel-Hai Academic College",
-        description: "Bachelor of Science in Computer Science with a focus on software development and Web development.",
+        description: "Bachelor of Science in Computer Science. Graduated with an average of 85.",
         date: "Graduated in 2024",
         icon: <SchoolIcon />,
     },
@@ -88,14 +98,14 @@ const professionalData : {
         company: "Israel Cyber Campus - Magshimim",
         description: `Taught C++ programming to 11th-grade students and computer networks to 10th-grade students.\n` +
         `Focused on coding best practices, Git version control, and hands-on projects.\n` + 
-        `Prepared students for elite IDF cyber units, achieving a 2/3 acceptance rate.`,
+        `Mentored 40+ students toward elite IDF cyber units, two thirds of them accepted.`,
         date: "2022 - 2024",
         icon: <WorkIcon />,
     },
     {
-        title: "Combat Fighter - Tank Corps",
+        title: "Combat Soldier - Armored Corps",
         company: "Israel Defense Forces",
-        description: "Tank loader in 7th brigade 75th battalion.",
+        description: "Tank loader in the 7th Brigade, 75th Battalion.",
         date: "2013 - 2016",
         icon: <WorkIcon />,
     },
@@ -124,4 +134,3 @@ export {
     LINE_COLOR,
     ICON_STYLE
 };
-

@@ -1,6 +1,12 @@
 const GITHUB_LINK = "https://github.com/pazMenachem";
 const LINKEDIN_LINK = "https://www.linkedin.com/in/paz-menachem/";
-const RESUME_LINK = "/Paz Menachem CV_L.pdf";
+
+/**
+ * Resolved against Vite's base URL so the link works both in local dev ("/")
+ * and on GitHub Pages ("/WebFolio/"). A root-absolute path silently 404s in
+ * production, because the site is published under a sub-path.
+ */
+const RESUME_LINK = `${import.meta.env.BASE_URL}Paz-Menachem-CV-Developer.pdf`;
 const MAIL = "Paz.menach@gmail.com";
 const PHONE = "+972 53-270-3667";
 
@@ -26,10 +32,6 @@ const recommendations: {
         Course Coordinator, Principles Course
         Center for Cyber Education`,
         recommendation: `“The feedback we received about Paz was among the highest I’ve ever seen for an instructor.”, “Paz would contribute greatly to any team he joins.”`,
-    },
-    {
-        name: "Grandma",
-        recommendation: `"Truley handsome and brilliant man!"`,
     },
 ]
 

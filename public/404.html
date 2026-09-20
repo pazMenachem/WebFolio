@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Paz Menachem</title>
+    <script>
+      // GitHub Pages serves this file for any path it does not recognise.
+      // The site is a single-page app, so a direct hit on /WebFolio/projects
+      // never reaches the router. Rewrite the path into a query string and
+      // bounce to the app root, where index.html turns it back into a route.
+      // pathSegmentsToKeep = 1 because the site is published under /WebFolio/.
+      (function () {
+        var pathSegmentsToKeep = 1;
+        var l = window.location;
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') +
+            '/?/' +
+            l.pathname
+              .slice(1)
+              .split('/')
+              .slice(pathSegmentsToKeep)
+              .join('/')
+              .replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

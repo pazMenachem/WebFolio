@@ -1,136 +1,108 @@
+/*
+ * The navbar is fixed, so the page below it is offset by --navbar-height
+ * (see index.css and App.css). Keep the two in step: if the bar's height
+ * changes here, change the token rather than adding a margin somewhere else.
+ */
+
 .navbar {
-    @apply min-w-screen text-white py-3 px-3 flex flex-col items-center justify-between shadow fixed top-0 z-10;
+    @apply w-full text-white flex flex-col shadow fixed top-0 left-0 z-20;
     background-color: #1a0c0c;
 }
 
-/* 375px - iPhone SE baseline */
-@media (min-width: 375px) {
-    .navbar {
-        @apply py-4 px-4;
+.navbar-bar {
+    @apply flex flex-row items-center justify-between px-4;
+    height: var(--navbar-height);
+}
+
+.navbar-title {
+    @apply font-bold text-lg tracking-tight text-white no-underline;
+}
+
+/* Hamburger: hidden once the links fit inline. 44px keeps the tap target at
+   the accessible minimum without making the 56px bar any taller. */
+.navbar-toggle {
+    @apply flex items-center justify-center w-11 h-11 -mr-2 bg-transparent border-0 text-white cursor-pointer;
+}
+
+.navbar-toggle svg {
+    @apply w-6 h-6;
+}
+
+.navbar-toggle:focus-visible,
+.navbar-title:focus-visible,
+.navbar-link:focus-visible {
+    @apply outline-2 outline-offset-2 outline-red-400;
+}
+
+/* Collapsed by default on phones; the toggle adds .navbar-links-open. */
+.navbar-links {
+    @apply hidden flex-col border-t border-white/10 pb-2;
+}
+
+.navbar-links-open {
+    @apply flex;
+}
+
+.navbar-link {
+    @apply flex items-center text-base text-white/90 no-underline px-4;
+    min-height: 44px;
+}
+
+.navbar-link:hover {
+    @apply text-white bg-white/5;
+}
+
+.navbar-link-active {
+    @apply text-white font-semibold;
+    box-shadow: inset 3px 0 0 0 #b41010;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .navbar-link {
+        @apply transition-colors duration-200;
     }
 }
 
-/* 390px - iPhone 12/13 Pro */
-@media (min-width: 390px) {
-    .navbar {
-        @apply px-5;
-    }
-}
-
-/* 768px - iPad portrait */
+/* 768px - the links fit on one line, so drop the toggle and the panel. */
 @media (min-width: 768px) {
     .navbar {
-        @apply flex-row px-8 py-4;
+        @apply flex-row items-center justify-between px-8;
+        height: var(--navbar-height);
+    }
+
+    .navbar-bar {
+        @apply px-0;
+        height: auto;
+    }
+
+    .navbar-title {
+        @apply text-2xl;
+    }
+
+    .navbar-toggle {
+        @apply hidden;
+    }
+
+    .navbar-links {
+        @apply flex flex-row items-center border-t-0 pb-0 gap-1;
+    }
+
+    .navbar-link {
+        @apply text-lg px-3 rounded;
+        min-height: 40px;
+    }
+
+    .navbar-link-active {
+        box-shadow: inset 0 -2px 0 0 #b41010;
     }
 }
 
-/* 1024px - iPad landscape */
-@media (min-width: 1024px) {
-    .navbar {
-        @apply px-10;
-    }
-}
-
-/* 1280px - Standard laptop */
 @media (min-width: 1280px) {
     .navbar {
         @apply px-12;
     }
-}
 
-/* 1440px - High-res laptop */
-@media (min-width: 1440px) {
-    .navbar {
-        @apply px-16;
+    .navbar-link {
+        @apply text-xl px-4;
     }
 }
-
-.navbar-title {
-    @apply font-bold text-lg;
-}
-
-/* 375px - iPhone SE baseline */
-@media (min-width: 375px) {
-    .navbar-title {
-        @apply text-xl;
-    }
-}
-
-/* 390px - iPhone 12/13 Pro */
-@media (min-width: 390px) {
-    .navbar-title {
-        @apply text-xl;
-    }
-}
-
-/* 768px - iPad portrait */
-@media (min-width: 768px) {
-    .navbar-title {
-        @apply text-2xl;
-    }
-}
-
-/* 1920px - Full HD screens */
-@media (min-width: 1920px) {
-    .navbar-title {
-        @apply text-3xl;
-    }
-}
-
-/* 2560px - 1440p screens */
-@media (min-width: 2560px) {
-    .navbar-title {
-        @apply text-4xl;
-    }
-}
-
-.navbar-links {
-    @apply flex flex-col items-center gap-2;
-}
-
-/* 768px - iPad portrait */
-@media (min-width: 768px) {
-    .navbar-links {
-        @apply flex-row gap-0;
-    }
-}
-
-.navbar-links a {
-    @apply text-base mx-1 hover:underline;
-}
-
-/* 375px - iPhone SE baseline */
-@media (min-width: 375px) {
-    .navbar-links a {
-        @apply text-lg mx-2;
-    }
-}
-
-/* 390px - iPhone 12/13 Pro */
-@media (min-width: 390px) {
-    .navbar-links a {
-        @apply text-lg mx-2;
-    }
-}
-
-/* 768px - iPad portrait */
-@media (min-width: 768px) {
-    .navbar-links a {
-        @apply text-xl mx-2;
-    }
-}
-
-/* 1920px - Full HD screens */
-@media (min-width: 1920px) {
-    .navbar-links a {
-        @apply text-2xl mx-3;
-    }
-}
-
-/* 2560px - 1440p screens */
-@media (min-width: 2560px) {
-    .navbar-links a {
-        @apply text-3xl mx-4;
-    }
-}
-  

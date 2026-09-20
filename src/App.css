@@ -1,15 +1,8 @@
+/*
+ * One offset token instead of the old `mt-24 + pt-30` stack, which pushed
+ * the first content 276px down a 812px phone screen.
+ */
 .app-container {
-    @apply bg-[#1D1616] min-h-screen min-w-screen mt-24;
-}
-
-@media (max-width: 767px) {
-    .app-container {
-        @apply pt-30;
-    }
-}
-
-@media (min-width: 768px) {
-    .app-container {
-        @apply pt-5;
-    }
+    @apply bg-[#1D1616] min-h-screen w-full;
+    padding-top: var(--navbar-height);
 }

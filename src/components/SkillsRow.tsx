@@ -1,11 +1,20 @@
 import { JSX } from "react";
+import type { Skill } from "../consts/SkillsConsts";
 
-export default function SkillsRow({index, data}: {index: number, data: {name: string, icon: string}[]}): JSX.Element {
+export default function SkillsRow({index, data}: {index: number, data: Skill[]}): JSX.Element {
     return (
         <div className={`skills-row ${index % 2 === 0 ? "" : "offset-row"}`}>
-            {data.map((item, index) => (
-                <div className={`skill-cell ${item.name? "" : "hidden"}`} style={{'--delay': `${index * 0.2}s`} as React.CSSProperties}>
-                    <img className="skill-icon" src={item.icon} alt={item.name} title={item.name}/>
+            {data.map((item, cellIndex) => (
+                <div
+                    key={item.name || `spacer-${cellIndex}`}
+                    className={`skill-cell ${item.name ? "" : "skill-cell-hidden"}`}
+                    style={{'--delay': `${cellIndex * 0.2}s`} as React.CSSProperties}
+                >
+                    {item.name && (
+                        <span className="skill-icon" role="img" aria-label={item.name} title={item.name}>
+                            {item.icon}
+                        </span>
+                    )}
                 </div>
             ))}
         </div>

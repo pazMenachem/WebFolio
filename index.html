@@ -2,13 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webfolio</title>
+
+    <title>Paz Menachem — Software Engineer</title>
+    <meta
+      name="description"
+      content="Software engineer in Israel. Ships production platforms at Copyleaks, wrote a Linux kernel module in C, taught C++ and networks at Magshimim."
+    />
+    <meta name="author" content="Paz Menachem" />
+    <link rel="canonical" href="https://pazmenachem.github.io/WebFolio/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Paz Menachem" />
+    <meta property="og:title" content="Paz Menachem — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software engineer in Israel. Ships production platforms at Copyleaks, wrote a Linux kernel module in C, taught C++ and networks at Magshimim."
+    />
+    <meta property="og:url" content="https://pazmenachem.github.io/WebFolio/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Paz Menachem — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Software engineer in Israel. Ships production platforms at Copyleaks, wrote a Linux kernel module in C, taught C++ and networks at Magshimim."
+    />
+
+    <script>
+      // Companion to public/404.html. GitHub Pages cannot serve a real route
+      // for a single-page app, so 404.html rewrites /WebFolio/projects into
+      // /WebFolio/?/projects and lands here. Turn it back into a path before
+      // React Router mounts, so the router sees the route the visitor asked for.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
   </head>
-  
+
   <body>
-    <div id="root"/>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

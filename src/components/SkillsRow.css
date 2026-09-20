@@ -13,7 +13,7 @@
   }
 
   .skill-icon {
-    @apply w-10 h-10;
+    @apply w-10 h-10 flex items-center justify-center text-white;
     transform: rotate(-90deg);
   }
   
@@ -30,7 +30,7 @@
     @apply flex ml-23.25;
   }
 
-  .hidden {
+  .skill-cell-hidden {
     opacity: 0 !important;
     cursor: default;
   }
@@ -38,3 +38,32 @@
   .skill-title {
     @apply text-white text-sm;
   }
+
+  .skill-icon svg {
+    @apply w-7 h-7;
+  }
+
+/* The honeycomb is 6 cells wide at every size. At the default 80px cell that
+   is ~576px, which overflows a 375px phone, so shrink the cell (and the
+   offset that staggers alternate rows) below the small breakpoint. */
+@media (max-width: 639px) {
+  .skill-cell {
+    @apply w-12 h-11 m-0.5;
+  }
+
+  .skill-icon {
+    @apply w-6 h-6;
+  }
+
+  .skill-icon svg {
+    @apply w-4 h-4;
+  }
+
+  .offset-row {
+    margin-left: 26px;
+  }
+
+  .skills-row {
+    @apply my-1 -mt-1.5;
+  }
+}

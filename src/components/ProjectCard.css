@@ -23,7 +23,7 @@
 }
 
 .project-image {
-  @apply w-full h-32 transform transition-transform border-b-4 border-red-700/50;
+  @apply w-full h-32 object-cover transform transition-transform border-b-4 border-red-700/50;
 }
 
 .project-details {
@@ -149,4 +149,19 @@
   .projects-grid {
     @apply grid-cols-5;
   }
+}
+
+/* Fallback for projects with no shareable screenshot (internal platforms). */
+.project-image-fallback {
+  @apply flex items-center justify-center text-center px-4;
+  background: linear-gradient(140deg, #2f2020 0%, #1f1616 100%);
+}
+
+.project-image-fallback span {
+  @apply text-white/80 text-sm font-semibold tracking-wide;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.project-title-static {
+  @apply m-0;
 }
