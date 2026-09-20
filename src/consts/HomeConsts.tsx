@@ -24,8 +24,8 @@ export const homeData : {image: string, altText: string, description: string}[] 
         units — two thirds of them were accepted. I wrote a Linux kernel module in C that filters traffic at the packet level, and
         I build with the Claude Agent SDK and MCP.
 
-        What I am looking for: backend software engineering, or DevSecOps and platform work — where writing the code, securing it
-        and running it are the same job.`
+        My work sits across backend services, DevSecOps and platform tooling, and cloud security — where writing the code,
+        securing it and running it are the same job.`
     },
 ]
 
