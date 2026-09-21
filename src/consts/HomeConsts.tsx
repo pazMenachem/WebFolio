@@ -31,7 +31,7 @@ const about = {
 
         `Outside work I build things end to end: a home internet filter that blocks domains from inside the Linux kernel,
         a multiplayer trivia game with its own C++ server and wire protocol, and a scheduler that reads job listings with
-        an LLM and messages me the matches on Telegram.`,
+        an LLM and messages the matches to Telegram.`,
 
         `Before Copyleaks I taught C++ and computer networks at Magshimim for two years — 40+ students, preparing them
         for elite IDF cyber units. Two thirds got in.`,
