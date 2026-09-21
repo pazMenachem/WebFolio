@@ -4,7 +4,7 @@ import JobSeekPlayGroundImage from "../assets/JobSeekPlayGround.webp";
 import WebFolioImage from "../assets/WebFolio.webp";
 import CodeToGether from "../assets/CodeToGether.webp";
 import BuyTogether from "../assets/BuyTogether.webp";
-import JobHunter from "../assets/JobHunterPicture.png";
+import JobHunter from "../assets/JobHunterPicture.webp";
 
 import {
     FaLinux, FaPython,

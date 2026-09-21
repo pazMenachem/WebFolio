@@ -1,4 +1,3 @@
-import aboutImage from "../assets/about.webp";
 import ContactMe from "../assets/ContactMe.webp";
 
 /**
@@ -15,8 +14,6 @@ import ContactMe from "../assets/ContactMe.webp";
  * @property {string[]} paragraphs - Body copy, one entry per paragraph.
  */
 const about = {
-    image: aboutImage,
-    altText: "Paz Menachem",
     eyebrow: "IT & Security Engineer at Copyleaks — Israel",
     name: "Paz Menachem",
     lead: "I build production software, and I secure the company that runs it.",
