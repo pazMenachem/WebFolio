@@ -2,49 +2,49 @@
     @apply flex flex-col items-center;
 }
 
+/*
+ * Horizontal padding keeps the hexagons off the viewport edge and stays as it
+ * was. Vertical padding is deliberately much smaller than horizontal: the
+ * section is only a title plus a few rows of hexagons, and a symmetric 40px
+ * left a third of every section empty. The old `gap-*` here never did
+ * anything - .skills-section is a block, and gap only applies to flex or grid.
+ */
 .skills-section {
-    @apply p-3 gap-5;
+    @apply px-3 py-2;
 }
 
 /* 375px - iPhone SE baseline */
 @media (min-width: 375px) {
     .skills-section {
-        @apply p-4 gap-6;
+        @apply px-4 py-2;
     }
 }
 
 /* 390px - iPhone 12/13 Pro */
 @media (min-width: 390px) {
     .skills-section {
-        @apply p-5 gap-7;
+        @apply px-5 py-3;
     }
 }
 
 /* 768px - iPad portrait */
 @media (min-width: 768px) {
     .skills-section {
-        @apply p-8 gap-8;
+        @apply px-8 py-3;
     }
 }
 
 /* 1024px - iPad landscape */
 @media (min-width: 1024px) {
     .skills-section {
-        @apply p-9 gap-9;
+        @apply px-9 py-4;
     }
 }
 
 /* 1280px - Standard laptop */
 @media (min-width: 1280px) {
     .skills-section {
-        @apply p-10 gap-10;
-    }
-}
-
-/* 1440px - High-res laptop */
-@media (min-width: 1440px) {
-    .skills-section {
-        @apply p-10 gap-10;
+        @apply px-10 py-4;
     }
 }
 
@@ -75,20 +75,6 @@
 
 /* 1024px - iPad landscape */
 @media (min-width: 1024px) {
-    .skills-title {
-        @apply text-4xl;
-    }
-}
-
-/* 1280px - Standard laptop */
-@media (min-width: 1280px) {
-    .skills-title {
-        @apply text-4xl;
-    }
-}
-
-/* 1440px - High-res laptop */
-@media (min-width: 1440px) {
     .skills-title {
         @apply text-4xl;
     }

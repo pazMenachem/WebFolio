@@ -1,3 +1,15 @@
+/*
+ * 16px between sections, not 48px. Combined with the section's own vertical
+ * padding this puts roughly 56px between the last hexagon of one section and
+ * the next section's title, down from 136px, and fits four sections in a
+ * 958px-tall viewport instead of two.
+ */
 .skills-page {
-    @apply flex flex-col items-center justify-center space-y-12;
+    @apply flex flex-col items-center justify-center space-y-6;
+}
+
+@media (min-width: 1024px) {
+    .skills-page {
+        @apply space-y-4;
+    }
 }
