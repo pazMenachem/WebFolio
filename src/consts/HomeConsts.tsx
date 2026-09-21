@@ -19,7 +19,7 @@ const about = {
     altText: "Paz Menachem",
     eyebrow: "IT & Security Engineer at Copyleaks — Israel",
     name: "Paz Menachem",
-    lead: "Software engineer who moved into security and kept shipping.",
+    lead: "I build production software, and I secure the company that runs it.",
     paragraphs: [
         `I am the sole IT and security engineer at Copyleaks, an 80-person SaaS company, reporting to the CISO — and I
         build the internal software too. Two systems I wrote end to end are in daily use there: the performance-review
