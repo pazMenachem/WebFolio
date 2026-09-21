@@ -3,8 +3,17 @@
 	to { opacity: 1; transform: translateY(0);}
 }
 
+/*
+ * One skill: the hexagon and its label, stacked. The wrapper is what sits in
+ * the row, so the row pitch is the wrapper width - the label can be wider
+ * than the hexagon without changing the honeycomb spacing.
+ */
+.skill {
+  @apply flex flex-col items-center w-17;
+}
+
 .skill-cell {
-    @apply w-20 h-18 m-2 relative transform transition-all duration-300 cursor-pointer flex items-center justify-center;
+    @apply w-16 h-14 relative transform transition-all duration-300 flex items-center justify-center;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     background-color: #38383f;
     animation: fadeIn 400ms ease-out var(--delay) 1 normal forwards;
@@ -13,55 +22,67 @@
   }
 
   .skill-icon {
-    @apply w-10 h-10 flex items-center justify-center text-white;
+    @apply w-6 h-6 flex items-center justify-center text-white;
     transform: rotate(-90deg);
   }
-  
-  .skill-cell:hover {
+
+  .skill-icon svg {
+    @apply w-5 h-5;
+  }
+
+  .skill:hover .skill-cell {
     @apply scale-110 shadow-lg;
     background-color: rgb(96, 13, 13);
   }
 
   .skills-row {
-    @apply flex flex-row justify-center my-2 -mt-3;
-  }
-  
-  /* Half a cell, so alternate rows nest into the row above. */
-  .offset-row {
-    transform: translateX(48px);
+    @apply flex flex-row justify-center;
   }
 
+  /* Half a wrapper, so alternate rows nest into the row above. */
+  .offset-row {
+    transform: translateX(34px);
+  }
+
+  /*
+   * The label. Without it the page is 36 unidentifiable hexagons on a phone:
+   * `title` tooltips need a hover, and a touch screen has none. It sits
+   * outside the clipped, rotated hexagon, so it needs no counter-rotation.
+   */
   .skill-title {
-    @apply text-white text-sm;
+    @apply block mt-1 text-center text-white/70 text-[10px] leading-tight;
+    /* Narrower than the wrapper so adjacent labels never touch. */
+    width: calc(100% - 8px);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    min-height: 2.4em;
+  }
+
+/* 768px - iPad portrait */
+@media (min-width: 768px) {
+  .skill {
+    @apply w-24;
+  }
+
+  .skill-cell {
+    @apply w-20 h-18;
+  }
+
+  .skill-icon {
+    @apply w-10 h-10;
   }
 
   .skill-icon svg {
     @apply w-7 h-7;
   }
 
-/* The honeycomb is 6 cells wide at every size. At the default 80px cell that
-   is ~576px, which overflows a 375px phone, so shrink the cell (and the
-   offset that staggers alternate rows) below the small breakpoint. */
-@media (max-width: 639px) {
-  .skill-cell {
-    @apply w-12 h-11 m-0.5;
-  }
-
-  .skill-icon {
-    @apply w-6 h-6;
-  }
-
-  .skill-icon svg {
-    @apply w-4 h-4;
-  }
-
-  /* Half the 52px mobile cell pitch (w-12 + m-0.5 x2). */
   .offset-row {
-    transform: translateX(26px);
+    transform: translateX(48px);
   }
 
-  .skills-row {
-    @apply my-1 -mt-1.5;
+  .skill-title {
+    @apply text-[11px] mt-2;
   }
 }
 
