@@ -54,6 +54,18 @@
     @apply mt-4;
 }
 
+/*
+ * With no image the content is the whole slider, so it centres instead of
+ * taking a half-width column beside an empty space.
+ */
+.slider-no-image {
+    @apply items-center;
+}
+
+.slider-no-image .about-panel {
+    @apply w-full;
+}
+
 /* 768px - iPad portrait */
 @media (min-width: 768px) {
     .slider-container {
@@ -62,6 +74,10 @@
 
     .slider-flip {
         @apply flex-row-reverse;
+    }
+
+    .slider-no-image {
+        @apply justify-center;
     }
 }
 
@@ -73,6 +89,10 @@
 
     .about-panel {
         @apply w-1/2 p-10;
+    }
+
+    .slider-no-image .about-panel {
+        @apply w-full;
     }
 
     .about-eyebrow {
