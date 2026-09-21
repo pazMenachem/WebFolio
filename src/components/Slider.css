@@ -1,5 +1,5 @@
 .slider-container {
-    @apply w-full pb-3 flex flex-col transform duration-1500 gap-3;
+    @apply w-full pb-3 flex flex-col gap-3 transition-opacity duration-300 ease-out;
     background-color: #1D1616;
 }
 
@@ -16,19 +16,42 @@
     @apply opacity-0;
 }
 
-.slider-description {
-    @apply text-white text-center mt-3 p-3 w-full;
-    font-style: italic;
+/*
+ * The introduction. It was centred italic across the full column, which are
+ * both pull-quote devices and neither survives 200 words: left-aligned,
+ * upright, and capped at 65 characters so the eye finds the next line.
+ */
+.about-panel {
+    @apply w-full p-3 text-left;
+    max-width: 65ch;
+}
+
+.about-eyebrow {
+    @apply m-0 mb-2 text-xs uppercase text-red-400;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: 0.14em;
+}
+
+.about-name {
+    @apply m-0 mb-3 text-3xl font-bold text-white;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.about-lead {
+    @apply m-0 mb-5 text-lg font-medium text-white;
     line-height: 1.4;
+}
+
+.about-body {
+    @apply m-0 text-base text-white/75;
+    line-height: 1.7;
     overflow-wrap: break-word;
-    word-wrap: break-word;
     hyphens: auto;
 }
 
-@media (min-width: 768px) {
-    .slider-container {
-        @apply flex-row-reverse;
-    }
+.about-body + .about-body {
+    @apply mt-4;
 }
 
 /* 768px - iPad portrait */
@@ -36,16 +59,7 @@
     .slider-container {
         @apply w-4/5 pb-8 flex-row;
     }
-}
 
-/* 1440px - High-res laptop */
-@media (min-width: 1440px) {
-    .slider-container {
-        @apply w-1/2;
-    }
-}
-
-@media (min-width: 768px) {
     .slider-flip {
         @apply flex-row-reverse;
     }
@@ -56,19 +70,33 @@
     .slider-image {
         @apply w-1/2 h-auto;
     }
-}
 
-/* 1024px - iPad landscape */
-@media (min-width: 1024px) {
-    .slider-description {
-        @apply p-10 w-1/2;
-        line-height: 1.7;
+    .about-panel {
+        @apply w-1/2 p-10;
+    }
+
+    .about-eyebrow {
+        @apply text-sm mb-3;
+    }
+
+    .about-name {
+        @apply text-5xl mb-4;
+    }
+
+    .about-lead {
+        @apply text-xl mb-6;
     }
 }
 
-/* 1920px - Full HD screens */
-@media (min-width: 1920px) {
-    .slider-description {
-        @apply p-10 text-xl;
+/* 1440px - High-res laptop */
+@media (min-width: 1440px) {
+    .slider-container {
+        @apply w-11/12 max-w-6xl;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slider-container {
+        @apply transition-none opacity-100;
     }
 }

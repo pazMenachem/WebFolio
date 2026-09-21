@@ -1,56 +1,54 @@
 import { useInView } from "react-intersection-observer";
-import ContactRecommend from "./ContactRecommend";
-import { JSX } from "react";
+import { JSX, ReactNode } from "react";
 
 /**
- * @property {string} description - Omitted when isContact is true, because the
- *   contact panel renders ContactRecommend instead of a description.
- * @property {"lazy" | "eager"} loading - "eager" for the first slider on the
- *   page (it is the largest contentful paint); "lazy" for everything below.
+ * An image beside a block of content, revealed as it scrolls into view.
+ *
+ * @property {boolean} priority - True for the first slider on the page. It
+ *   starts visible rather than waiting for the observer, so the first
+ *   viewport has readable content at first paint instead of after an
+ *   animation.
  */
 export default function Slider({
     imageSrc,
     altText,
     flip,
-    description,
-    isContact = false,
-    loading = "lazy",
+    priority = false,
+    children,
  }: {
     imageSrc: string,
     altText: string,
     flip: boolean,
-    description?: string,
-    isContact?: boolean,
-    loading?: "lazy" | "eager",
+    priority?: boolean,
+    children: ReactNode,
  }): JSX.Element {
 
     const { ref, inView } = useInView({
         threshold: 0.2,
         triggerOnce: true,
+        initialInView: priority,
     });
 
     return (
-        <div className={
-            `slider-container 
-            ${inView ? "slider-visible" : "slider-hidden"} 
-            ${flip ? "slider-flip" : ""} 
-            ${isContact ? "contact-slider-container" : ""}`
+        <div
+            className={
+                `slider-container 
+                ${inView ? "slider-visible" : "slider-hidden"} 
+                ${flip ? "slider-flip" : ""}`
             }
-            ref={ref}>
+            ref={ref}
+        >
             <img
                 className="slider-image"
                 src={imageSrc}
                 alt={altText}
                 width={1024}
                 height={1536}
-                loading={loading}
+                loading={priority ? "eager" : "lazy"}
                 decoding="async"
+                fetchPriority={priority ? "high" : "auto"}
             />
-            {
-            isContact ?
-                <ContactRecommend /> :
-                <p className="slider-description">{description}</p>
-            }
+            {children}
         </div>
     )
 }

@@ -14,7 +14,7 @@
 .project-card {
   @apply rounded-4xl shadow-lg overflow-hidden opacity-0;
   background-color: #292931;
-  animation: fadeIn 1s var(--delay) forwards ease-in-out;
+  animation: fadeIn 400ms var(--delay) forwards ease-out;
   box-shadow: 0 0 10px 2px #b41010;
 }
 
@@ -164,4 +164,15 @@
 
 .project-title-static {
   @apply m-0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    animation: none;
+    opacity: 1;
+  }
+
+  .project-card:hover .project-image {
+    @apply scale-100;
+  }
 }
