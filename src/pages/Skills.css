@@ -1,3 +1,8 @@
+/*
+ * One gap between sections. Each section is itself a title box and a
+ * honeycomb box with their own gap, so all the vertical spacing on this page
+ * is two numbers: this one, and the one in SkillsGrid.css.
+ */
 .skills-page {
-    @apply flex flex-col items-center justify-center space-y-12;
+    @apply flex flex-col items-center gap-12;
 }
