@@ -8,7 +8,7 @@ export default function SkillsRow({offset, data}: {offset: boolean, data: Skill[
                 <div
                     key={item.name}
                     className="skill-cell"
-                    style={{'--delay': `${cellIndex * 0.2}s`} as React.CSSProperties}
+                    style={{'--delay': `${cellIndex * 0.06}s`} as React.CSSProperties}
                 >
                     <span className="skill-icon" role="img" aria-label={item.name} title={item.name}>
                         {item.icon}

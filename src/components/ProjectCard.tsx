@@ -1,5 +1,7 @@
 import { JSX } from "react";
 
+// The fade-in stagger is capped at five steps: with eleven cards,
+// index * 0.1s left the last one starting a second after load.
 export default function ProjectCard(
     {index, projectImage, projectTitle, projectDescription, projectLink, projectTechStack}: {
     index: number,
@@ -11,7 +13,7 @@ export default function ProjectCard(
     }
 ): JSX.Element {
     return (
-        <div className="project-card" style={{'--delay': `${index * 0.1}s`} as React.CSSProperties}>
+        <div className="project-card" style={{'--delay': `${Math.min(index, 5) * 0.05}s`} as React.CSSProperties}>
             {projectImage ? (
                 <img
                     src={projectImage}
